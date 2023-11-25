@@ -8,9 +8,6 @@ nombre_jugador = ""
 principal = tk.Tk()
 principal.title("Perdido en el Laberinto: Un Juego Simple Basado en Texto")
 
-etiqueta = tk.Label(principal, text = "Hola Mundo")
-etiqueta.pack(side = tk.BOTTOM)
-
 #Introducción y configuración del jugador
 etiqueta_intro = tk.Label(principal, text = "Bienvenido a Perdido en el Laberinto, ¿estás dispuesto a comenzar?")
 etiqueta_intro.pack()
