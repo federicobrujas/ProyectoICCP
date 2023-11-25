@@ -48,9 +48,30 @@ def buscarEnLaHabitación():
     etiqueta_texto_inicial.destroy()
     
     etiqueta_texto_buscar_en_la_habitacion.pack()
+    
+    boton_inspeccionar_simbolos.pack()
 
 def afrontarLaPuerta():
-    print("blabla")
+    boton_buscar_en_la_habitacion.destroy()
+    boton_afrontar_la_puerta.destroy()
+    etiqueta_texto_inicial.destroy()
+    
+    etiqueta_texto_afrontar_la_puerta.pack()
+    
+    boton_cruzar_el_puente.pack()
+    boton_explorar_otro_camino.pack()
+    
+def cruzarElPuente():
+    blabla
+    
+def explorarOtroCamino():
+    blabla
+    
+def inspeccionarSimbolos():
+    boton_inspeccionar_simbolos.destroy()
+    
+    
+    
     
 #Función terminar ejecución
 def salirJuego():
@@ -62,6 +83,9 @@ boton_inicio.pack()
 boton_salir = tk.Button(principal, text = "Salir", command = salirJuego)
 boton_buscar_en_la_habitacion = tk.Button(principal, text = "Buscar en la habitación", command = buscarEnLaHabitación)
 boton_afrontar_la_puerta = tk.Button(principal, text = "Afrontar la puerta", command = afrontarLaPuerta)
+boton_cruzar_el_puente = tk.Button(principal, text = "Cruzar el puente", command = cruzarElPuente)
+boton_explorar_otro_camino = tk.Button(principal, text = "Explorar otro camino", command = explorarOtroCamino)
+boton_inspeccionar_simbolos = tk.Button(principal, text = "Inspeccionar los Símbolos en las Paredes", command = inspeccionarSimbolos)
 
 #Textos
 texto_inicial = (
@@ -77,9 +101,16 @@ texto_buscar_en_la_habitacion = (
         f"Determinado, contemplas tu próximo movimiento.\n"
     )
 
+texto_afrontar_la_puerta = (
+    f"Decides proceder por la misteriosa puerta.\n" 
+    f"El angosto corredor te lleva hacia un laberinto con pasajes enredados.\n" 
+    f"Te enfrentas a tu primer desafío: un puente precario sobre un abismo aparentemente interminable.\n"
+)
+
 #Etiquetas de texto
 etiqueta_texto_inicial = tk.Label(principal, text = texto_inicial)
 etiqueta_texto_buscar_en_la_habitacion = tk.Label(principal, text = texto_buscar_en_la_habitacion)
+etiqueta_texto_afrontar_la_puerta = tk.Label(principal, text = texto_afrontar_la_puerta)
 
 
 
