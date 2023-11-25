@@ -77,8 +77,6 @@ def inspeccionarSimbolos():
     
     
     
-    
-    
 #Función terminar ejecución
 def salirJuego():
     principal.destroy()
