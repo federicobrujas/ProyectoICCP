@@ -26,14 +26,16 @@ def comenzarJuego ():
     etiqueta_intro.config(text = f"Bienvenido, {nombre_jugador}! La aventura comienza...")
     boton_inicio.destroy()
     boton_salir.pack()
-
+    
 boton_inicio = tk.Button(principal, text = "Comenzar")
+boton_inicio.pack()
 
 #Botón salir
 def salir_juego():
     principal.destroy()
     
-boton_salir = tk.Button(principal, text = "Salir", command= salir_juego)
+boton_salir = tk.Button(principal, text = "Salir", command = salir_juego)
+boton_salir.pack()
     
 
 
