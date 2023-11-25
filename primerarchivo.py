@@ -31,7 +31,7 @@ boton_inicio = tk.Button(principal, text = "Comenzar")
 boton_inicio.pack()
 
 #Botón salir
-def salir_juego():
+def salirJuego():
     principal.destroy()
     
 boton_salir = tk.Button(principal, text = "Salir", command = salir_juego)
