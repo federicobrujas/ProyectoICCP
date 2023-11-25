@@ -62,13 +62,19 @@ def afrontarLaPuerta():
     boton_explorar_otro_camino.pack()
     
 def cruzarElPuente():
-    blabla
+    boton_cruzar_el_puente.destroy()
+    boton_explorar_otro_camino.destroy()
     
 def explorarOtroCamino():
-    blabla
+    boton_cruzar_el_puente.destroy()
+    boton_explorar_otro_camino.destroy()
     
 def inspeccionarSimbolos():
     boton_inspeccionar_simbolos.destroy()
+    etiqueta_texto_buscar_en_la_habitacion.destroy()
+    
+    etiqueta_texto_inspeccionar_simbolos.pack()
+    
     
     
     
@@ -107,10 +113,17 @@ texto_afrontar_la_puerta = (
         f"Te enfrentas a tu primer desafío: un puente precario sobre un abismo aparentemente interminable.\n"
     )
 
+texto_inspeccionar_simbolos = (
+        f"Los símbolos en las paredes parecen formar un mapa rudimentario del laberinto, y descifras un mensaje:\n" 
+        f"'Cuidado con las criaturas, no confíes en nadie'\n"
+        f"Armado con esta advertencia, te preparas para el viaje que tienes por delante.\n"
+)
+
 #Etiquetas de texto
 etiqueta_texto_inicial = tk.Label(principal, text = texto_inicial)
 etiqueta_texto_buscar_en_la_habitacion = tk.Label(principal, text = texto_buscar_en_la_habitacion)
 etiqueta_texto_afrontar_la_puerta = tk.Label(principal, text = texto_afrontar_la_puerta)
+etiqueta_texto_inspeccionar_simbolos = tk.Label(principal, text = texto_inspeccionar_simbolos)
 
 
 
