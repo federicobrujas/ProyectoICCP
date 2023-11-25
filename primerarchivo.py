@@ -102,10 +102,10 @@ texto_buscar_en_la_habitacion = (
     )
 
 texto_afrontar_la_puerta = (
-    f"Decides proceder por la misteriosa puerta.\n" 
-    f"El angosto corredor te lleva hacia un laberinto con pasajes enredados.\n" 
-    f"Te enfrentas a tu primer desafío: un puente precario sobre un abismo aparentemente interminable.\n"
-)
+        f"Decides proceder por la misteriosa puerta.\n" 
+        f"El angosto corredor te lleva hacia un laberinto con pasajes enredados.\n" 
+        f"Te enfrentas a tu primer desafío: un puente precario sobre un abismo aparentemente interminable.\n"
+    )
 
 #Etiquetas de texto
 etiqueta_texto_inicial = tk.Label(principal, text = texto_inicial)
