@@ -187,6 +187,20 @@ boton_ignorar_caverna = Button(principal, text = "Ignorar la caverna y continuar
 boton_continuar = Button(principal, text = "Continuar")
 boton_forzar_cerradura = Button(principal, text = "Intentar forzar cerradura")
 boton_explorar_otro_camino_2 = Button(principal, text = "Buscar otra ruta", command = explorarOtroCamino)
+boton_enfrentar_laberinto = Button(principal, text = "Enfrentar el laberinto directamente")
+boton_encontrar_refugio = Button(principal, text = "Buscar refugio y esperar un cambio")
+boton_seguir_el_mapa = Button(principal, text = "Seguir el mapa para navegar con seguridad")
+boton_continuar_camino_instintos = Button(principal, text = "Continúa tu camino siguiendo únicamente tus instintos")
+boton_enfrentar_guardianes = Button(principal, text = "Enfrentar a los guardianes")
+boton_escapar_adentrandose = Button(principal, text = "Escapar adentrándose en el laberinto")
+boton_dar_ultima_batalla = Button(principal, text = "Dar una última batalla")
+boton_implorar_piedad = Button(principal, text = "Implorar piedad")
+boton_salir_caverna = Button(principal, text = "Salir de la caverna y continuar explorando")
+boton_quedarse_investigar = Button(principal, text = "Quedarse e investigar un poco más")
+boton_lograste_escalar_no_caes = Button(principal, text="Intentas escalar")
+boton_rendir_ante_caida = Button(principal, text= "Te rindes y caes esperando lo mejor")
+boton_investigas_mas= Button(principal, text= "Investigar un poco más")
+boton_precipitas_salida = Button(principal, text= "Precipitarte hacia la salida")
 
 
 # Textos
