@@ -185,6 +185,8 @@ boton_retroceder_replantear_estrategia = Button(principal, text = "Retroceder y 
 boton_investigar_caverna = Button(principal, text = "Investigar la caverna")
 boton_ignorar_caverna = Button(principal, text = "Ignorar la caverna y continuar por el camino")
 boton_continuar = Button(principal, text = "Continuar")
+boton_forzar_cerradura = Button(principal, text = "Intentar forzar cerradura")
+boton_explorar_otro_camino_2 = Button(principal, text = "Buscar otra ruta", command = explorarOtroCamino)
 
 
 # Textos
@@ -303,6 +305,79 @@ texto_investigas_mas = (
     f"que te encuentras en una cámara llena de artefactos\n"
 )
 
+texto_proceder_seguridad = (
+    f"Usando el misterioso mapa, navegas el laberinto con una confianza renovada.\n"
+    f"El mapa te lleva a una cámara central llena de artefactos.\n"
+)
+
+texto_camara_central = (
+    f"A medida que investigas los artefactos más a fondo, notas un pequeño compartimento que revela una llave.\n"
+    f"Intrigado, notas una cerradura muy peculiar que encaja perfectamente con la forma de la llave.\n"
+    f"Insertas la llave en la cerradura y la cámara comienza a transformarse.\n"
+    f"Se abre un pasadizo que te conduce de vuelta al mundo real.\n"
+    f"A medida que lo recorres notas que estás sosteniendo un objeto muy antiguo: una reliquia del experimento.\n\n"
+    f"HAS ESCAPADO DEL LABERINTO Y ESTÁS A SALVO\n\n"
+    f"Este artefacto es único, un símbolo de tu triunfo sobre el enigmático laberinto.\n"
+    f"Puede que tenga una significancia histórica o que tenga misteriosos poderes que podrás aprovechar en tu vida.\n"
+    f"La naturaleza y potencial de esta reliquia están por ser descubiertas…\n"
+)
+
+texto_enfrentar_guardianes = (
+    f"Te paras firmemente de cara a los guardianes con determinación.\n"
+    f"Sin embargo, su cantidad te abruma, y sus garras despedazan cualquier defensa que puedas tener.\n"
+    f"Lo último que ves es la retorcida mueca de en la cara de uno de los guardianes mientras la oscuridad te consume.\n\n"
+    f"El experimento reclama una nueva víctima y tu aventura en el laberinto llega a un trágico final.\n\n"
+    f"FIN\n"
+)
+
+texto_escapar_adentrandose = (
+    f"Con el miedo apretando tu corazón, te giras y corres hacia la profundidad del laberinto, con la esperanza de perder a los guardianes que te persiguen.\n"
+    f"Sin embargo, el laberinto serpentea de manera impredecible y te encuentras en un callejón sin salida.\n"
+    f"Los guardianes se acercan con sus ojos hambrientos fijos en ti.\n"
+)
+
+texto_lograste_escalar_no_caes = (
+    f"Con todas tus fuerzas escalas y tocas suelo firme.\n"
+    f"Te encuentras en una caverna, ¿acaso la misma que decidiste ignorar?\n"
+    f"No muy lejos ves que la luz del exterior se asoma pero eres consciente de que si ésta es la misma caverna que decidiste ignorar.\n"
+    f"Salir podría traerte de vuelta a este mismo punto.\n"
+)
+
+texto_implorar_piedad = (
+    f"Te arrodillas e imploras piedad.\n"
+    f"Los guardianes hacen una pausa, sus caras retorcidas muestran una expresión de duda por un momento.\n"
+    f"Pero la piedad no es un lenguaje que ellos entiendan.\n"
+    f"Atacan sin remordimiento y tus lamentos quedan sin respuesta.\n\n"
+    f"El experimento reclama una nueva víctima y tu aventura en el laberinto llega a un trágico final.\n\n"
+    f"FIN\n"
+)
+
+texto_investigar_caverna = (
+    f"La caverna está muy calurosa, no sabes si es buena idea quedarte.\n"
+    f"Sin embargo, también piensas que algo muy importante puedes encontrar si investigas un poco más.\n"
+)
+
+texto_buscar_otra_salida50 = (
+    f"Te adentras en un camino particularmente escabroso, y cada vez más oscuro.\n"
+    f"El piso se siente cada vez más inestable.\n"
+    f"En el momento en que te preguntas si deberías retornar, el suelo se derrumba.\n"
+    f"Agitas tus brazos y tus manos agarran algo.\n"
+)
+
+texto_permaneces_caverna = (
+    f"El calor aumenta y comienzas a sentir algo de mareo, aún no encuentras nada.\n"
+    f"Una parte de ti cree que debe investigar un poco más.\n"
+    f"Miras a la salida, está más lejana de lo que parece.\n"
+    f"No sabes si puedas llegar sin desmayarte.\n"
+)
+
+texto_precipitas_salida = (
+    f"El calor es insoportable, tu visión de la salida se hace doble, caes al suelo, pierdes la consciencia.\n"
+    f"Te entregas a una muerte sin dolor.\n"
+    f"El experimento ha cobrado una nueva vida.\n\n"
+    f"FIN\n"
+)
+
 #Etiquetas de texto
 etiqueta_texto_inicial = Label(principal, text = texto_inicial)
 etiqueta_texto_buscar_en_la_habitacion = Label(principal, text = texto_buscar_en_la_habitacion)
@@ -322,6 +397,17 @@ etiqueta_texto_explorar_camino_izquierda = Label(principal, text = texto_explora
 etiqueta_texto_intentas_forzar_cerradura = Label(principal, text = texto_intentas_forzar_cerradura)
 etiqueta_texto_buscas_refugio_esperas = Label(principal, text = texto_buscas_refugio_esperas)
 etiqueta_texto_investigas_mas = Label (principal, text = texto_investigas_mas)
+etiqueta_texto_proceder_seguridad = Label(principal, text = texto_proceder_seguridad)
+etiqueta_texto_camara_central = Label(principal, text = texto_camara_central)
+etiqueta_texto_enfrentar_guardianes = Label(principal, text = texto_enfrentar_guardianes)
+etiqueta_texto_escapar_adentrandose = Label(principal, text = texto_escapar_adentrandose)
+etiqueta_texto_lograste_escalar_no_caes = Label(principal, text = texto_lograste_escalar_no_caes)
+etiqueta_texto_implorar_piedad = Label(principal, text = texto_implorar_piedad)
+etiqueta_texto_investigar_caverna = Label(principal, text = texto_investigar_caverna)
+etiqueta_texto_buscar_otra_salida50 = Label(principal, text = texto_buscar_otra_salida50)
+etiqueta_texto_permaneces_caverna = Label(principal,  text = texto_permaneces_caverna)
+
+
 
 #Loop principal
 principal.mainloop()
