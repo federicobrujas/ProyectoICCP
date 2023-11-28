@@ -79,6 +79,7 @@ def memorizarMapaCruzarPuerta(): #Página 12
     boton_memorizar_mapa.destroy()
 
     etiqueta_texto_memorizar_mapa_cruzar_puerta.pack()
+    
     boton_cruzar_el_puente.pack()
     boton_explorar_otro_camino.pack()    
     
@@ -128,8 +129,15 @@ def explorarOtroCamino(): #Página 24
     boton_explorar_otro_camino_1.destroy()
     boton_cruzar_el_puente.destroy()
     boton_seguir_cruzando_el_puente.destroy()
+    boton_explorar_camino_derecha.destroy()
+    boton_explorar_camino_izquierda.destroy()
+    boton_explorar_otro_camino_3.destroy()
+    boton_seguir_el_mapa.destroy()
     etiqueta_texto_afrontar_la_puerta.destroy()
     etiqueta_texto_cruzar_el_puente.destroy()
+    etiqueta_texto_continuar_cruzando_el_puente.destroy()
+    etiqueta_texto_explorar_camino_izquierda.destroy()
+    etiqueta_texto_memorizar_mapa_cruzar_puerta.destroy()
      
     etiqueta_texto_explorar_otro_camino.pack()
     
@@ -148,15 +156,24 @@ def encontrarOtraSalida(): #Página 25
     
 def rendirAnteCaida(): #Página 26
     boton_rendir_ante_caida.destroy()
+    boton_lograste_escalar_no_caes.destroy()
+    etiqueta_texto_buscar_otra_salida50.destroy()
     
     etiqueta_texto_rendir_ante_caida.pack()
     
     boton_continuar_1.pack()
+    boton_a_la_30.pack()
 
 def continuarAdelante(): #Página 28
     boton_continuar.destroy()
     boton_continuar_adelante.destroy()
     boton_retroceder_replantear_estrategia.destroy()
+    boton_encontrar_refugio.destroy()
+    boton_continuar_adelante_1.destroy()
+    boton_continuar_1.destroy()
+    etiqueta_texto_rendir_ante_caida.destroy()
+    etiqueta_texto_retroceder_replantear_estrategia.destroy()
+    etiqueta_texto_atravesar_puerta_que_se_cierra.destroy()
     
     etiqueta_texto_continuar_adelante.pack()
     
@@ -167,6 +184,9 @@ def retrocederReplantearEstrategia(): #Página 30
     boton_continuar_1.destroy()
     boton_continuar_adelante.destroy()
     boton_retroceder_replantear_estrategia.destroy()
+    boton_a_la_30.destroy()
+    etiqueta_texto_rendir_ante_caida.destroy()
+    etiqueta_texto_atravesar_puerta_que_se_cierra.destroy()
     
     etiqueta_texto_retroceder_replantear_estrategia.pack()
     
@@ -176,6 +196,7 @@ def retrocederReplantearEstrategia(): #Página 30
 def explorarCaminoIzquierda(): #Página 31
     boton_explorar_camino_izquierda.destroy()
     boton_explorar_camino_derecha.destroy()
+    etiqueta_texto_continuar_cruzando_el_puente.destroy()
     
     etiqueta_texto_explorar_camino_izquierda.pack()
     
@@ -185,6 +206,7 @@ def explorarCaminoIzquierda(): #Página 31
 def forzarCerradura(): #Página 34
     boton_forzar_cerradura.destroy()
     boton_explorar_otro_camino_2.destroy()
+    etiqueta_texto_continuar_adelante.destroy()
     
     etiqueta_texto_intentas_forzar_cerradura.pack()
     
@@ -194,12 +216,16 @@ def forzarCerradura(): #Página 34
 def buscasRefugioEsperas(): #Página 38
     boton_encontrar_refugio.destroy()
     boton_continuar_adelante_1.destroy()
+    etiqueta_texto_retroceder_replantear_estrategia.destroy()
     
     etiqueta_texto_buscas_refugio_esperas.pack()
     
     boton_continuar_4.pack()
     
 def investigasMas(): #Página 39
+    boton_investigas_mas.destroy()
+    boton_precipitas_salida.destroy()
+    etiqueta_texto_permaneces_caverna.destroy()
     
     etiqueta_texto_investigas_mas.pack()
     
@@ -208,6 +234,11 @@ def investigasMas(): #Página 39
 def procederSeguridad(): #Página 40
     boton_explorar_otro_camino_3.destroy()
     boton_seguir_el_mapa.destroy()
+    boton_explorar_camino_derecha.destroy()
+    boton_explorar_camino_izquierda.destroy()
+    etiqueta_texto_continuar_cruzando_el_puente.destroy()
+    etiqueta_texto_explorar_camino_izquierda.destroy()
+    
     
     etiqueta_texto_proceder_seguridad.pack()
     
@@ -216,16 +247,22 @@ def procederSeguridad(): #Página 40
 def camaraCentral(): #Página 41
     boton_continuar_2.destroy()
     boton_continuar_3.destroy()
+    etiqueta_texto_proceder_seguridad.destroy()
+    etiqueta_texto_investigas_mas.destroy()
     
     etiqueta_texto_camara_central.pack()
     
 def enfrentarGuardianes(): #Página 42
     boton_enfrentar_guardianes.destroy()
     boton_escapar_adentrandose.destroy()
+    boton_dar_ultima_batalla.destroy()
+    boton_implorar_piedad.destroy()
+    etiqueta_texto_intentas_forzar_cerradura.destroy()
+    etiqueta_texto_escapar_adentrandose.destroy()
     
     etiqueta_texto_enfrentar_guardianes.pack()
     
-    #Faltan cosas y borrar de la 44
+    #Faltan cosas
     
 def vueltaAlLaberinto(): #Página 43
     boton_continuar_4.destroy()
@@ -235,20 +272,25 @@ def vueltaAlLaberinto(): #Página 43
 def escaparAdentrandose(): #Página 44
     boton_enfrentar_guardianes.destroy()
     boton_escapar_adentrandose.destroy()
+    etiqueta_texto_intentas_forzar_cerradura.destroy()
     
     etiqueta_texto_escapar_adentrandose.pack()
     
-    #llama a la 48
+    boton_implorar_piedad.pack()
+    boton_dar_ultima_batalla.pack()
 
 def lograsteEscalarNoCaes(): #Página 46
     boton_lograste_escalar_no_caes.destroy()
+    boton_rendir_ante_caida.destroy()
+    etiqueta_texto_buscar_otra_salida50.destroy()
     
     etiqueta_texto_lograste_escalar_no_caes.pack()
     
     boton_continuar_5.pack()
     
 def implorarPiedad(): #Página 48
-    #llamada por 44
+    boton_implorar_piedad.destroy()
+    etiqueta_texto_escapar_adentrandose.destroy()
     
     etiqueta_texto_implorar_piedad.pack()
 
@@ -256,6 +298,8 @@ def investigarCaverna(): #Página 49
     boton_investigar_caverna.destroy()
     boton_ignorar_caverna.destroy()
     boton_continuar_5.destroy()
+    etiqueta_texto_lograste_escalar_no_caes.destroy()
+    etiqueta_texto_explorar_otro_camino.destroy()
     
     etiqueta_texto_investigar_caverna.pack()
     
@@ -268,6 +312,9 @@ def buscarOtraSalida50(): #Página 50
     boton_continuar.destroy()
     boton_salir_caverna.destroy()
     boton_quedarse_investigar.destroy()
+    etiqueta_texto_explorar_otro_camino.destroy()
+    etiqueta_texto_investigar_caverna.destroy()
+    etiqueta_texto_encontrar_otra_salida.destroy()
     
     etiqueta_texto_buscar_otra_salida50.pack()
     
@@ -277,17 +324,31 @@ def buscarOtraSalida50(): #Página 50
 def permanecesCaverna(): #Página 56
     boton_salir_caverna.destroy()
     boton_quedarse_investigar.destroy()
+    etiqueta_texto_investigar_caverna.destroy()
     
     etiqueta_texto_permaneces_caverna.pack()
     
     boton_investigas_mas.pack()
     boton_precipitas_salida.pack()
     
-def precipitasSalida(): #Página 59
+def precipitasSalida(): #Página 57
     boton_investigas_mas.destroy()
     boton_precipitas_salida.destroy()
+    etiqueta_texto_permaneces_caverna.destroy()
     
-    etiqueta_texto_precipitas_salida.pack()  
+    etiqueta_texto_precipitas_salida.pack()
+    
+def goldenChoice(): #Página 69
+    boton_lograste_escalar_no_caes.destroy()
+    boton_rendir_ante_caida.destroy()
+    boton_continuar_4.destroy()
+    boton_forzar_cerradura.destroy()
+    boton_explorar_otro_camino_2.destroy()
+    etiqueta_texto_buscar_otra_salida50.destroy()
+    etiqueta_texto_buscas_refugio_esperas.destroy()
+    etiqueta_texto_continuar_adelante.destroy()
+    
+    etiqueta_texto_golden_choice.pack()  
               
 
 #Función terminar ejecución
@@ -309,35 +370,36 @@ boton_memorizar_mapa = Button(principal, text = "Memorizar el mapa y avanzar por
 boton_atravesar_puerta_que_se_cierra = Button(principal, text = "Atravesar rápidamente la puerta que se cierra", command = atravesarPuertaQueSeCierra)
 boton_encontrar_otra_salida = Button(principal, text ="Buscar otra salida", command = encontrarOtraSalida)
 boton_seguir_cruzando_el_puente = Button(principal, text ="Continuar cruzando el puente", command = seguirCruzandoElPuente)
-boton_explorar_camino_izquierda = Button(principal, text = "Explorar el camino de la izquierda")
-boton_explorar_camino_derecha = Button(principal, text = "Explorar el camino de la derecha")
-boton_continuar_adelante = Button(principal, text = "Continuar adelante")
-boton_retroceder_replantear_estrategia = Button(principal, text = "Retroceder y replantear tu estrategia")
-boton_investigar_caverna = Button(principal, text = "Investigar la caverna")
-boton_ignorar_caverna = Button(principal, text = "Ignorar la caverna y continuar por el camino")
-boton_continuar = Button(principal, text = "Continuar")
-boton_forzar_cerradura = Button(principal, text = "Intentar forzar cerradura")
-boton_explorar_otro_camino_2 = Button(principal, text = "Buscar otra ruta", command = explorarOtroCamino)
+boton_explorar_camino_izquierda = Button(principal, text = "Explorar el camino de la izquierda", command = explorarCaminoIzquierda)
+boton_explorar_camino_derecha = Button(principal, text = "Explorar el camino de la derecha", command = explorarOtroCamino)
+boton_continuar_adelante = Button(principal, text = "Continuar adelante", command = continuarAdelante)
+boton_retroceder_replantear_estrategia = Button(principal, text = "Retroceder y replantear tu estrategia", command = retrocederReplantearEstrategia)
+boton_investigar_caverna = Button(principal, text = "Investigar la caverna", command = investigarCaverna)
+boton_ignorar_caverna = Button(principal, text = "Ignorar la caverna y continuar por el camino", command = buscarOtraSalida50)
+boton_continuar = Button(principal, text = "Continuar", command = buscarOtraSalida50)
+boton_forzar_cerradura = Button(principal, text = "Intentar forzar cerradura", command = forzarCerradura)
+boton_explorar_otro_camino_2 = Button(principal, text = "Explorar otro camino", command = goldenChoice)
 boton_enfrentar_laberinto = Button(principal, text = "Enfrentar el laberinto directamente")
-boton_encontrar_refugio = Button(principal, text = "Buscar refugio y esperar un cambio")
-boton_seguir_el_mapa = Button(principal, text = "Seguir el mapa para navegar con seguridad")
+boton_encontrar_refugio = Button(principal, text = "Buscar refugio y esperar un cambio", command = buscasRefugioEsperas)
+boton_seguir_el_mapa = Button(principal, text = "Seguir el mapa para navegar con seguridad", command = procederSeguridad)
 boton_explorar_otro_camino_3 = Button(principal, text = "Continúa tu camino siguiendo únicamente tus instintos", command = explorarOtroCamino)
-boton_enfrentar_guardianes = Button(principal, text = "Enfrentar a los guardianes")
-boton_escapar_adentrandose = Button(principal, text = "Escapar adentrándose en el laberinto")
-boton_dar_ultima_batalla = Button(principal, text = "Dar una última batalla")
-boton_implorar_piedad = Button(principal, text = "Implorar piedad")
-boton_salir_caverna = Button(principal, text = "Salir de la caverna y continuar explorando")
-boton_quedarse_investigar = Button(principal, text = "Quedarse e investigar un poco más")
-boton_lograste_escalar_no_caes = Button(principal, text="Intentas escalar", command = lograsteEscalarNoCaes)
+boton_enfrentar_guardianes = Button(principal, text = "Enfrentar a los guardianes", command = enfrentarGuardianes)
+boton_escapar_adentrandose = Button(principal, text = "Escapar adentrándose en el laberinto", command = escaparAdentrandose)
+boton_dar_ultima_batalla = Button(principal, text = "Dar una última batalla", command = enfrentarGuardianes)
+boton_implorar_piedad = Button(principal, text = "Implorar piedad", command = implorarPiedad)
+boton_salir_caverna = Button(principal, text = "Salir de la caverna y continuar explorando", command = buscarOtraSalida50)
+boton_quedarse_investigar = Button(principal, text = "Quedarse e investigar un poco más", command = permanecesCaverna)
+boton_lograste_escalar_no_caes = Button(principal, text="Intentas escalar", command = goldenChoice)
 boton_rendir_ante_caida = Button(principal, text= "Te rindes y caes esperando lo mejor", command = rendirAnteCaida)
 boton_investigas_mas= Button(principal, text= "Investigar un poco más", command = investigasMas)
 boton_precipitas_salida = Button(principal, text= "Precipitarte hacia la salida", command = precipitasSalida)
-boton_continuar_1 = Button(principal, text = "Continuar", command = continuarAdelante)
-boton_continuar_adelante_1 = Button(principal, text = "Continuar adelante")
-boton_continuar_2 = Button(principal, text = "Continuar")
-boton_continuar_3 = Button(principal, text = "Continuar")
-boton_continuar_4 = Button(principal, text = "Continuar", command = vueltaAlLaberinto)
-boton_continuar_5 = Button(principal, text= "Continuar")
+boton_continuar_1 = Button(principal, text = "Seguir adelante", command = continuarAdelante)
+boton_continuar_adelante_1 = Button(principal, text = "Continuar adelante", command = continuarAdelante)
+boton_continuar_2 = Button(principal, text = "Continuar", command = camaraCentral)
+boton_continuar_3 = Button(principal, text = "Continuar", command = camaraCentral)
+boton_continuar_4 = Button(principal, text = "Continuar", command = goldenChoice)
+boton_continuar_5 = Button(principal, text= "Continuar", command = investigarCaverna)
+boton_a_la_30 =Button(principal, text = "Retroceder y replantear estrategia", command = retrocederReplantearEstrategia)
 
 
 # Textos
@@ -390,7 +452,7 @@ texto_encontrar_otra_salida =(
         f"Eventualmente un punto oscuro llama tu atención, te diriges hacia este y descubres que es una entrada a un pasadizo por el que apenas cabes.\n"
 )
 texto_explorar_otro_camino =(
-        f"Decides evitar el raquítico puente y buscar una ruta alterna, tomas un pasadizo cada vez más angosto,\n"
+        f"Decides buscar una ruta alterna, tomas un pasadizo cada vez más angosto,\n"
         f"te volteas pues el camino no te da confianza y descubres que el camino de vuelta está bloqueado, solo puedes seguir adelante.\n"
         f"Después de lo que parecen horas caminando, encuentras una entrada hacia lo que parece una caverna.\n"
 )
@@ -533,6 +595,14 @@ texto_vuelta_al_laberinto = (
     f"Caminas un poco y encuentras un puente\n"
 )
 
+texto_golden_choice = (
+    f"Das un paso.\n"
+    f"Sientes algo macizo bajo tu pie derecho.\n"
+    f"Una explosión te deja sordo, una milésima antes de matarte\n\n"
+    f"Por un mal paso te has convertido en la nueva víctima del experimento\n\n"
+    f"FIN\n"    
+)
+
 #Etiquetas de texto
 etiqueta_texto_inicial = Label(principal, text = texto_inicial)
 etiqueta_texto_buscar_en_la_habitacion = Label(principal, text = texto_buscar_en_la_habitacion)
@@ -563,7 +633,7 @@ etiqueta_texto_buscar_otra_salida50 = Label(principal, text = texto_buscar_otra_
 etiqueta_texto_permaneces_caverna = Label(principal,  text = texto_permaneces_caverna)
 etiqueta_texto_vuelta_al_laberinto = Label(principal, text = texto_vuelta_al_laberinto)
 etiqueta_texto_precipitas_salida = Label(principal, text = texto_precipitas_salida)
-
+etiqueta_texto_golden_choice = Label(principal, text = texto_golden_choice)
 
 
 #Loop principal
