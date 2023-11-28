@@ -42,7 +42,7 @@ def comienzoHistoria():
     
 #Funciones de transcurso de la historia
 
-def buscarEnLaHabitación():
+def buscarEnLaHabitación(): #Página 4
     boton_buscar_en_la_habitacion.destroy()
     #boton_afrontar_la_puerta.destroy()
     etiqueta_texto_inicial.destroy()
@@ -52,7 +52,7 @@ def buscarEnLaHabitación():
     boton_inspeccionar_simbolos.pack()
     boton_afrontar_la_puerta.place(x=200,y=100)
 
-def afrontarLaPuerta():
+def afrontarLaPuerta(): #Página 6
     boton_inspeccionar_simbolos.destroy()
     etiqueta_texto_buscar_en_la_habitacion.destroy()
     boton_buscar_en_la_habitacion.destroy()
@@ -64,7 +64,34 @@ def afrontarLaPuerta():
     boton_cruzar_el_puente.pack()
     boton_explorar_otro_camino.pack()
     
-def cruzarElPuente():
+def inspeccionarSimbolos(): #Página 8
+    boton_inspeccionar_simbolos.destroy()
+    etiqueta_texto_buscar_en_la_habitacion.destroy()
+    boton_afrontar_la_puerta.destroy()
+    
+    etiqueta_texto_inspeccionar_simbolos.pack()
+    boton_arrancar_simbolos.pack()
+    boton_memorizar_mapa.pack()    
+    
+def memorizarMapaCruzarPuerta(): #Página 12
+    etiqueta_texto_inspeccionar_simbolos.destroy()
+    boton_arrancar_simbolos.destroy()
+    boton_memorizar_mapa.destroy()
+
+    etiqueta_texto_memorizar_mapa_cruzar_puerta.pack()
+    boton_cruzar_el_puente.pack()
+    boton_explorar_otro_camino.pack()    
+    
+def arrancarSimbolos(): #Página 14
+    etiqueta_texto_inspeccionar_simbolos.destroy()
+    boton_arrancar_simbolos.destroy()
+    boton_memorizar_mapa.destroy()
+
+    etiqueta_texto_arrancar_simbolos.pack()
+    boton_atravesar_puerta_que_se_cierra.pack()
+    boton_encontrar_otra_salida.pack()
+        
+def cruzarElPuente():#Página 18
     boton_cruzar_el_puente.destroy()
     boton_explorar_otro_camino.destroy()
     etiqueta_texto_memorizar_mapa_cruzar_puerta.destroy()
@@ -75,8 +102,18 @@ def cruzarElPuente():
     etiqueta_texto_cruzar_el_puente.pack()
     boton_explorar_otro_camino_1.pack()
     boton_seguir_cruzando_el_puente.pack()
+    
+def atravesarPuertaQueSeCierra(): #Página 22
+    etiqueta_texto_arrancar_simbolos.destroy()
+    boton_atravesar_puerta_que_se_cierra.destroy()
+    boton_encontrar_otra_salida.destroy()
 
-def seguirCruzandoElPuente():
+    etiqueta_texto_atravesar_puerta_que_se_cierra.pack()
+    
+    boton_continuar_adelante.pack()
+    boton_retroceder_replantear_estrategia.pack()    
+
+def seguirCruzandoElPuente(): #Página 23
     etiqueta_texto_cruzar_el_puente.destroy()
     boton_explorar_otro_camino_1.destroy()
     boton_seguir_cruzando_el_puente.destroy()
@@ -85,56 +122,8 @@ def seguirCruzandoElPuente():
     
     boton_explorar_camino_izquierda.pack()
     boton_explorar_camino_derecha.pack()
-    
-    
 
-def explorarOtroCamino():
-    boton_cruzar_el_puente.destroy()
-    boton_explorar_otro_camino.destroy()
-    etiqueta_texto_memorizar_mapa_cruzar_puerta.destroy()
-    boton_cruzar_el_puente.destroy()
-    boton_explorar_otro_camino.destroy()
-    
-def inspeccionarSimbolos():
-    boton_inspeccionar_simbolos.destroy()
-    etiqueta_texto_buscar_en_la_habitacion.destroy()
-    boton_afrontar_la_puerta.destroy()
-    
-    etiqueta_texto_inspeccionar_simbolos.pack()
-    boton_arrancar_simbolos.pack()
-    boton_memorizar_mapa.pack()
-
-def arrancarSimbolos():
-    etiqueta_texto_inspeccionar_simbolos.destroy()
-    boton_arrancar_simbolos.destroy()
-    boton_memorizar_mapa.destroy()
-
-    etiqueta_texto_arrancar_simbolos.pack()
-    boton_atravesar_puerta_que_se_cierra.pack()
-    boton_encontrar_otra_salida.pack()
-
-
-def memorizarMapaCruzarPuerta():
-    etiqueta_texto_inspeccionar_simbolos.destroy()
-    boton_arrancar_simbolos.destroy()
-    boton_memorizar_mapa.destroy()
-
-    etiqueta_texto_memorizar_mapa_cruzar_puerta.pack()
-    boton_cruzar_el_puente.pack()
-    boton_explorar_otro_camino.pack()
-
-
-def atravesarPuertaQueSeCierra():
-    etiqueta_texto_arrancar_simbolos.destroy()
-    boton_atravesar_puerta_que_se_cierra.destroy()
-    boton_encontrar_otra_salida.destroy()
-
-    etiqueta_texto_atravesar_puerta_que_se_cierra.pack()
-    
-    boton_continuar_adelante.pack()
-    boton_retroceder_replantear_estrategia.pack()
-    
-def explorarOtroCamino():
+def explorarOtroCamino(): #Página 24
     boton_explorar_otro_camino.destroy()
     boton_explorar_otro_camino_1.destroy()
     boton_cruzar_el_puente.destroy()
@@ -148,7 +137,7 @@ def explorarOtroCamino():
     boton_ignorar_caverna.pack()
         
 
-def encontrarOtraSalida():
+def encontrarOtraSalida(): #Página 25
     etiqueta_texto_arrancar_simbolos.destroy()
     boton_atravesar_puerta_que_se_cierra.destroy()
     boton_encontrar_otra_salida.destroy()
@@ -156,8 +145,150 @@ def encontrarOtraSalida():
     etiqueta_texto_encontrar_otra_salida.pack()
     
     boton_continuar.pack()
+    
+def rendirAnteCaida(): #Página 26
+    boton_rendir_ante_caida.destroy()
+    
+    etiqueta_texto_rendir_ante_caida.pack()
+    
+    boton_continuar_1.pack()
 
+def continuarAdelante(): #Página 28
+    boton_continuar.destroy()
+    boton_continuar_adelante.destroy()
+    boton_retroceder_replantear_estrategia.destroy()
+    
+    etiqueta_texto_continuar_adelante.pack()
+    
+    boton_forzar_cerradura.pack()
+    boton_explorar_otro_camino_2.pack()
+    
+def retrocederReplantearEstrategia(): #Página 30
+    boton_continuar_1.destroy()
+    boton_continuar_adelante.destroy()
+    boton_retroceder_replantear_estrategia.destroy()
+    
+    etiqueta_texto_retroceder_replantear_estrategia.pack()
+    
+    boton_encontrar_refugio.pack()
+    boton_continuar_adelante_1.pack()
+    
+def explorarCaminoIzquierda(): #Página 31
+    boton_explorar_camino_izquierda.destroy()
+    boton_explorar_camino_derecha.destroy()
+    
+    etiqueta_texto_explorar_camino_izquierda.pack()
+    
+    boton_explorar_otro_camino_3.pack()
+    boton_seguir_el_mapa.pack()
+    
+def forzarCerradura(): #Página 34
+    boton_forzar_cerradura.destroy()
+    boton_explorar_otro_camino_2.destroy()
+    
+    etiqueta_texto_intentas_forzar_cerradura.pack()
+    
+    boton_enfrentar_guardianes.pack()
+    boton_escapar_adentrandose.pack()
+    
+def buscasRefugioEsperas(): #Página 38
+    boton_encontrar_refugio.destroy()
+    boton_continuar_adelante_1.destroy()
+    
+    etiqueta_texto_buscas_refugio_esperas.pack()
+    
+    boton_continuar_4.pack()
+    
+def investigasMas(): #Página 39
+    
+    etiqueta_texto_investigas_mas.pack()
+    
+    boton_continuar_2.pack()
+    
+def procederSeguridad(): #Página 40
+    boton_explorar_otro_camino_3.destroy()
+    boton_seguir_el_mapa.destroy()
+    
+    etiqueta_texto_proceder_seguridad.pack()
+    
+    boton_continuar_3.pack()
+    
+def camaraCentral(): #Página 41
+    boton_continuar_2.destroy()
+    boton_continuar_3.destroy()
+    
+    etiqueta_texto_camara_central.pack()
+    
+def enfrentarGuardianes(): #Página 42
+    boton_enfrentar_guardianes.destroy()
+    boton_escapar_adentrandose.destroy()
+    
+    etiqueta_texto_enfrentar_guardianes.pack()
+    
+    #Faltan cosas y borrar de la 44
+    
+def vueltaAlLaberinto(): #Página 43
+    boton_continuar_4.destroy()
+    
+    etiqueta_texto_vuelta_al_laberinto.pack()
+    
+def escaparAdentrandose(): #Página 44
+    boton_enfrentar_guardianes.destroy()
+    boton_escapar_adentrandose.destroy()
+    
+    etiqueta_texto_escapar_adentrandose.pack()
+    
+    #llama a la 48
 
+def lograsteEscalarNoCaes(): #Página 46
+    boton_lograste_escalar_no_caes.destroy()
+    
+    etiqueta_texto_lograste_escalar_no_caes.pack()
+    
+    boton_continuar_5.pack()
+    
+def implorarPiedad(): #Página 48
+    #llamada por 44
+    
+    etiqueta_texto_implorar_piedad.pack()
+
+def investigarCaverna(): #Página 49
+    boton_investigar_caverna.destroy()
+    boton_ignorar_caverna.destroy()
+    boton_continuar_5.destroy()
+    
+    etiqueta_texto_investigar_caverna.pack()
+    
+    boton_salir_caverna.pack()
+    boton_quedarse_investigar.pack()
+    
+def buscarOtraSalida50(): #Página 50
+    boton_investigar_caverna.destroy()
+    boton_ignorar_caverna.destroy()
+    boton_continuar.destroy()
+    boton_salir_caverna.destroy()
+    boton_quedarse_investigar.destroy()
+    
+    etiqueta_texto_buscar_otra_salida50.pack()
+    
+    boton_lograste_escalar_no_caes.pack()
+    boton_rendir_ante_caida.pack()
+    
+def permanecesCaverna(): #Página 56
+    boton_salir_caverna.destroy()
+    boton_quedarse_investigar.destroy()
+    
+    etiqueta_texto_permaneces_caverna.pack()
+    
+    boton_investigas_mas.pack()
+    boton_precipitas_salida.pack()
+    
+def precipitasSalida(): #Página 59
+    boton_investigas_mas.destroy()
+    boton_precipitas_salida.destroy()
+    
+    etiqueta_texto_precipitas_salida.pack()  
+              
 
 #Función terminar ejecución
 def salirJuego():
@@ -190,17 +321,23 @@ boton_explorar_otro_camino_2 = Button(principal, text = "Buscar otra ruta", comm
 boton_enfrentar_laberinto = Button(principal, text = "Enfrentar el laberinto directamente")
 boton_encontrar_refugio = Button(principal, text = "Buscar refugio y esperar un cambio")
 boton_seguir_el_mapa = Button(principal, text = "Seguir el mapa para navegar con seguridad")
-boton_continuar_camino_instintos = Button(principal, text = "Continúa tu camino siguiendo únicamente tus instintos")
+boton_explorar_otro_camino_3 = Button(principal, text = "Continúa tu camino siguiendo únicamente tus instintos", command = explorarOtroCamino)
 boton_enfrentar_guardianes = Button(principal, text = "Enfrentar a los guardianes")
 boton_escapar_adentrandose = Button(principal, text = "Escapar adentrándose en el laberinto")
 boton_dar_ultima_batalla = Button(principal, text = "Dar una última batalla")
 boton_implorar_piedad = Button(principal, text = "Implorar piedad")
 boton_salir_caverna = Button(principal, text = "Salir de la caverna y continuar explorando")
 boton_quedarse_investigar = Button(principal, text = "Quedarse e investigar un poco más")
-boton_lograste_escalar_no_caes = Button(principal, text="Intentas escalar")
-boton_rendir_ante_caida = Button(principal, text= "Te rindes y caes esperando lo mejor")
-boton_investigas_mas= Button(principal, text= "Investigar un poco más")
-boton_precipitas_salida = Button(principal, text= "Precipitarte hacia la salida")
+boton_lograste_escalar_no_caes = Button(principal, text="Intentas escalar", command = lograsteEscalarNoCaes)
+boton_rendir_ante_caida = Button(principal, text= "Te rindes y caes esperando lo mejor", command = rendirAnteCaida)
+boton_investigas_mas= Button(principal, text= "Investigar un poco más", command = investigasMas)
+boton_precipitas_salida = Button(principal, text= "Precipitarte hacia la salida", command = precipitasSalida)
+boton_continuar_1 = Button(principal, text = "Continuar", command = continuarAdelante)
+boton_continuar_adelante_1 = Button(principal, text = "Continuar adelante")
+boton_continuar_2 = Button(principal, text = "Continuar")
+boton_continuar_3 = Button(principal, text = "Continuar")
+boton_continuar_4 = Button(principal, text = "Continuar", command = vueltaAlLaberinto)
+boton_continuar_5 = Button(principal, text= "Continuar")
 
 
 # Textos
@@ -392,6 +529,10 @@ texto_precipitas_salida = (
     f"FIN\n"
 )
 
+texto_vuelta_al_laberinto = (
+    f"Caminas un poco y encuentras un puente\n"
+)
+
 #Etiquetas de texto
 etiqueta_texto_inicial = Label(principal, text = texto_inicial)
 etiqueta_texto_buscar_en_la_habitacion = Label(principal, text = texto_buscar_en_la_habitacion)
@@ -420,6 +561,8 @@ etiqueta_texto_implorar_piedad = Label(principal, text = texto_implorar_piedad)
 etiqueta_texto_investigar_caverna = Label(principal, text = texto_investigar_caverna)
 etiqueta_texto_buscar_otra_salida50 = Label(principal, text = texto_buscar_otra_salida50)
 etiqueta_texto_permaneces_caverna = Label(principal,  text = texto_permaneces_caverna)
+etiqueta_texto_vuelta_al_laberinto = Label(principal, text = texto_vuelta_al_laberinto)
+etiqueta_texto_precipitas_salida = Label(principal, text = texto_precipitas_salida)
 
 
 
