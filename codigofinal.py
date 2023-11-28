@@ -466,7 +466,7 @@ texto_afrontar_la_puerta = (
         f"El angosto corredor te lleva hacia\n" 
         f"un laberinto con pasajes enredados.\n" 
         f"Te enfrentas a tu primer desafío: \n" 
-        f"un puente precario sobre un abismo \n 
+        f"un puente precario sobre un abismo \n "
         f"aparentemente interminable.\n"
     )
 
