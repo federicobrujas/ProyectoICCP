@@ -404,190 +404,283 @@ boton_a_la_30 =Button(principal, text = "Retroceder y replantear estrategia", co
 
 # Textos
 texto_inicial = (
-        f"Tus ojos se abren de golpe, te encuentras en una habitación tenue con el sabor metálico del miedo en el aire.\n"
-        f"El sudor frío recorre tu frente mientras te pones de pie, dándote cuenta de que estás solo.\n" 
-        f"Las paredes están decoradas con símbolos extraños que parecen palpitar con una energía inquietante.\n" 
-        f"Una puerta misteriosa te llama hacia la oscuridad que hay más allá.\n"
+        f"Tus ojos se abren de golpe, te encuentras en una habitación \n" 
+        f"tenuemente iluminadacon el sabor metálico del miedo en el aire.\n"
+        f"El sudor frío recorre tu frente mientras te pones de pie, \n" 
+        f"dándote cuenta de que estás solo.\n" 
+        f"Las paredes están decoradas con símbolos extraños que \n" 
+        f"parecen palpitar con una energía inquietante.\n" 
+        f"Una puerta misteriosa te llama hacia la oscuridad \n" 
+        f"que hay más allá.\n"
     )
 
 texto_buscar_en_la_habitacion = (
-        f"Mientras buscas, tu mano roza una nota arrugada en tu bolsillo.\n" 
-        f"Dice: ""Navega el laberinto para encontrar la verdad"".\n" 
-        f"Determinado, contemplas tu próximo movimiento.\n"
+        f"Mientras buscas, tu mano roza una\n" 
+        f"nota arrugada en tu bolsillo.\n" 
+        f"Dice: ""Navega el laberinto \n" 
+        f"para encontrar la verdad"".\n" 
+        f"Determinado, contemplas\n 
+        f"tu próximo movimiento.\n"
     )
 
 texto_afrontar_la_puerta = (
         f"Decides proceder por la misteriosa puerta.\n" 
-        f"El angosto corredor te lleva hacia un laberinto con pasajes enredados.\n" 
-        f"Te enfrentas a tu primer desafío: un puente precario sobre un abismo aparentemente interminable.\n"
+        f"El angosto corredor te lleva hacia\n" 
+        f"un laberinto con pasajes enredados.\n" 
+        f"Te enfrentas a tu primer desafío: \n" 
+        f"un puente precario sobre un abismo \n 
+        f"aparentemente interminable.\n"
     )
 
 texto_inspeccionar_simbolos = (
-        f"Los símbolos en las paredes parecen formar un mapa rudimentario del laberinto, y descifras un mensaje:\n" 
+        f"Los símbolos en las paredes parecen formar un \n" 
+        f"mapa rudimentario del laberinto, y descifras un mensaje:\n" 
         f"'Cuidado con las criaturas, no confíes en nadie'\n"
-        f"Armado con esta advertencia, te preparas para el viaje que tienes por delante.\n"
+        f"Armado con esta advertencia, te preparas para el \n" 
+        f"viaje que tienes por delante.\n"
 )
 texto_memorizar_mapa_cruzar_puerta = (
-        f"Entras en el laberinto, entre sus giros y vueltas retumban sonidos escalofriantes.\n"
-        f"Criaturas acechan en las sombras, y te enfrentas a tu primer desafío:\n"
-        f"Un puente precario sobre un abismo aparentemente interminable.\n "
-        f"Cierras los ojos e intentas recordar el mapa que intentaste memorizar,\n"
-        f"hay algo en ese puente que te dice que debes cruzarlo\n"
+        f"Entras en el laberinto, entre sus giros y \n"
+        f"vueltas retumban sonidos escalofriantes.\n"
+        f"Criaturas acechan en las sombras, y te \n"
+        f"enfrentas a tu primer desafío:\n"
+        f"Un puente precario sobre un \n" 
+        f"abismo aparentemente interminable.\n "
+        f"Cierras los ojos e intentas recordar \n" 
+        f"el mapa que intentaste memorizar,\n"
+        f"hay algo en ese puente que te dice \n"
+        f"que debes cruzarlo\n"
 )
 texto_arrancar_simbolos = (
-        f"Con urgencia, arrancas los símbolos de las paredes, pensando que podrían ser cruciales para tu supervivencia.\n "
-        f"Sin embargo, al guardarlos apresuradamente en tus bolsillos, un ruido abominable resuena en la habitación. \n"
-        f"Las paredes parecen temblar, y la puerta de salida comienza a cerrarse.\n"
+        f"Con urgencia, arrancas los símbolos \n"
+        f"de las paredes, pensando que podrían \n"
+        f"ser cruciales para tu supervivencia.\n "
+        f"Sin embargo, al guardarlos apresuradamente \n"
+        f"en tus bolsillos, un ruido abominable \n"
+        f"resuena en la habitación. Las paredes \n"
+        f"parecen temblar, y la puerta de \n"
+        f"salida comienza a cerrarse.\n"
 )
 texto_atravesar_puerta_que_se_cierra =(
-        f"Corres hacia la puerta que se cierra, apenas logrando pasar antes de que se selle.\n"
-        f"La habitación se transforma en un laberinto, ves cómo la forma del laberinto se transforma frente a tus ojos \n"
-        f"de manera impredecible. Los símbolos rasgados en tus manos son ahora indescifrables.\n\n"
-        f"Mientras avanzas, el laberinto se vuelve más traicionero. Las sombras parpadean y gruñidos distantes aseguran peligros acechando.\n"
-        f"Tu decisión de arrancar los símbolos puede haber hecho que el laberinto sea aún más impredecible.\n"
+        f"Corres hacia la puerta que se cierra, \n"
+        f"apenas logrando pasar antes de que se selle.\n"
+        f"La habitación se transforma en un laberinto, \n"
+        f"ves cómo la forma del laberinto se transforma \n"
+        f"frente a tus ojos de manera impredecible. \n"
+        f"Los símbolos rasgados en tus manos son \n"
+        f"ahora indescifrables.\n\n"
+        f"Mientras avanzas, el laberinto se vuelve más \n"
+        f"traicionero. Las sombras parpadean y gruñidos \n"
+        f"distantes aseguran peligros acechando.\n"
+        f"Tu decisión de arrancar los símbolos puede \n"
+        f"haber hecho que el laberinto sea aún más impredecible.\n"
 )
 texto_encontrar_otra_salida =(
-        f"La puerta se cierra y la habitación comienza a temblar.\n"
-        f"Desesperado buscas otra salida, pasas tu mirada por todos los rincones.\n"
-        f"Eventualmente un punto oscuro llama tu atención, te diriges hacia este y descubres que es una entrada a un pasadizo por el que apenas cabes.\n"
+        f"La puerta se cierra y la habitación comienza\n" 
+        f"a temblar. Desesperado buscas otra salida, pasas \n"
+        f"tu mirada por todos los rincones.Eventualmente \n"
+        f"un punto oscuro llama tu atención, te diriges \n"
+        f"hacia este y descubres que es una entrada a un \n"
+        f"pasadizo por el que apenas cabes.\n"
 )
 texto_explorar_otro_camino =(
-        f"Decides buscar una ruta alterna, tomas un pasadizo cada vez más angosto,\n"
-        f"te volteas pues el camino no te da confianza y descubres que el camino de vuelta está bloqueado, solo puedes seguir adelante.\n"
-        f"Después de lo que parecen horas caminando, encuentras una entrada hacia lo que parece una caverna.\n"
+        f"Decides buscar una ruta alterna, tomas un \n"
+        f"pasadizo cada vez más angosto, te volteas pues \n"
+        f"el camino no te da confianza y descubres que \n"
+        f"el camino de vuelta está bloqueado, solo puedes \n"
+        f"seguir adelante.Después de lo que parecen horas \n"
+        f"caminando, encuentras una entrada hacia lo que \n"
+        f"parece una caverna.\n"
 )
 texto_cruzar_el_puente =(
-        f"Te acercas con cautela al precario puente, el eco de tus pasos se mezcla con el sonido espeluznante del\n"
-         f"laberinto. Cuando subes a la primera tabla, ésta cruje siniestramente pero mantiene tu peso.\n"
+        f"Te acercas con cautela al precario puente, el \n"
+        f"eco de tus pasos se mezcla con el sonido \n"
+        f"espeluznante del laberinto. Cuando subes a la \n"
+        f"primera tabla, ésta cruje siniestramente pero \n"
+        f"mantiene tu peso.\n"
 )
 texto_continuar_cruzando_el_puente =(
-        f"Con pasos cuidadosos, navegas por el puente traicionero. El abismo de abajo parece interminable,\n"
-        f"pero llegas ileso al otro lado. El laberinto se abre y te dirige al interior de una caverna que\n"
+        f"Con pasos cuidadosos, navegas por el puente \n"
+        f"traicionero. El abismo de abajo parece interminable,\n"
+        f"pero llegas ileso al otro lado. El laberinto se \n"
+        f"abre y te dirige al interior de una caverna que\n"
         f"es una cámara con múltiples caminos.\n\n"
-        f"De repente escuchas lamentos y gritos de desesperación que parecen venir del camino de la izquierda.\n"
+        f"De repente escuchas lamentos y gritos de \n"
+        f"desesperación que parecen venir del camino de la izquierda.\n"
 )
 
 texto_rendir_ante_caida = (
-    f"Estás de vuelta en el laberinto, esta vez la forma del laberinto se transforma frente a tus ojos de manera impredecible.\n"
-    f"Los símbolos rasgados en tus manos son ahora indescifrables.\n\n"
-    f"Mientras avanzas, el laberinto se vuelve más traicionero\n"
-    f"Las sombras parpadean y gruñidos distantes aseguran peligros acechando.\n"
-    f"Tu decisión de arrancar los símbolos puede haber hecho que el laberinto sea aún más impredecible.\n"
+    f"Estás de vuelta en el laberinto, esta vez la \n"
+    f"forma del laberinto se transforma frente a tus \n"
+    f"ojos de manera impredecible. Los símbolos \n"
+    f"rasgados en tus manos son ahora indescifrables.\n\n"
+    f"Mientras avanzas, el laberinto se vuelve más \n"
+    f"traicionero. Las sombras parpadean y gruñidos \n"
+    f"distantes aseguran peligros acechando.\n"
+    f"Tu decisión de arrancar los símbolos puede haber \n"
+    f"hecho que el laberinto sea aún más impredecible.\n"
 )
 
 texto_continuar_adelante = (
-    f"Con determinación, sigues adelante a través de los corredores siempre cambiantes del laberinto.\n"
-    f"Los símbolos rasgados ofrecen poca orientación, y pronto te encuentras frente a una enorme puerta cerrada con llave.\n"
+    f"Con determinación, sigues adelante a través de \n"
+    f"los corredores siempre cambiantes del laberinto.\n"
+    f"Los símbolos rasgados ofrecen poca orientación, \n"
+    f"y pronto te encuentras frente a una enorme puerta \n"
+    f"cerrada con llave.\n"
 )
 
 texto_retroceder_replantear_estrategia = (
-    f"Al darte cuenta de que los símbolos rasgados son más un obstáculo que una ayuda,\n"
-    f"retrocedes intentando volver sobre tus pasos.\n"
-    f"Sin embargo, el laberinto parece tener una mente propia, reorganizándose como si se burlara de tus intentos de escapar.\n"
+    f"Al darte cuenta de que los símbolos rasgados son \n"
+    f"más un obstáculo que una ayuda, retrocedes \n"
+    f" intentando volver sobre tus pasos. Sin embargo, \n"
+    f"el laberinto parece tener una mente propia, \n"
+    f"reorganizándose como si se burlara de tus \n"
+    f"intentos de escapar.\n"
     
 )
 
 texto_explorar_camino_izquierda = (
-    f"Te aventuras por el camino de la izquierda y te encuentras con un grupo de personas perdidas.\n"
-    f"Algunos ofrecen valiosas ideas y comparten suministros.\n"
-    f"Uno de ellos te entrega un mapa del laberinto, que revela atajos y peligros potenciales.\n"
+    f"Te aventuras por el camino de la izquierda y \n"
+    f"te encuentras con un grupo de personas perdidas.\n"
+    f"Algunos ofrecen valiosas ideas y comparten \n"
+    f"suministros. Uno de ellos te entrega un mapa \n"
+    f"del laberinto, que revela atajos y peligros potenciales.\n"
 )
 
 texto_intentas_forzar_cerradura = (
-    f"Tomas aire profundamente, acercándote a la imponente puerta.\n"
-    f"La tenue luz proyecta sombras inquietantes a medida que manipulas el candado, intentando forzarlo desesperadamente.\n"
-    f"Sin que te des cuenta, el sonido que haces en tu esfuerzo produce un eco en el laberinto\n"
+    f"Tomas aire profundamente, acercándote a la \n"
+    f"imponente puerta. La tenue luz proyecta sombras \n"
+    f"inquietantes a medida que manipulas el candado, \n"
+    f"intentando forzarlo desesperadamente.\n"
+    f"Sin que te des cuenta, el sonido que haces en \n"
+    f"tu esfuerzo produce un eco en el laberinto\n"
     f"llamando la atención de los guardianes de este.\n\n"
-    f"De repente la puerta se abre revelando un pasadizo angosto.\n"
-    f"Sonríes triunfante, pero la sonrisa dura poco.\n"
-    f"Los guardianes, unas criaturas grotescas con garras afiladas y ojos hambrientos emergen de las sombras.\n"
+    f"De repente la puerta se abre revelando un \n"
+    f"pasadizo angosto. Sonríes triunfante, pero \n"
+    f"la sonrisa dura poco. Los guardianes, unas \n"
+    f"criaturas grotescas con garras afiladas y \n"
+    f"ojos hambrientos emergen de las sombras.\n"
 )
 
 texto_buscas_refugio_esperas = (
-    f"Encuentras una pequeña zanja donde apenas cabes, esta parece ser capaz de protegerte del caos de afuera.\n"
-    f"El mundo comienza a temblar, es como un terremoto que jamás has sentido ni imaginado.\n"
-    f"Eres incapaz de salir de donde estás y tu única esperanza es que ahí dentro estés seguro.\n"
-    f"Después de lo que parece una eternidad el temblor cesa y sales de la zanja.\n"
-    f"Ahora el laberinto parece estable y de hecho te parece familiar con lo que alcanzaste a ver del mapa.\n"
+    f"Encuentras una pequeña zanja donde apenas \n"
+    f"cabes, esta parece ser capaz de protegerte \n"
+    f"del caos de afuera. El mundo comienza a temblar, \n"
+    f"es como un terremoto que jamás has sentido \n"
+    f"ni imaginado. Eres incapaz de salir de donde \n"
+    f"estás y tu única esperanza es que ahí dentro \n"
+    f"estés seguro. Después de lo que parece una \n"
+    f"eternidad el temblor cesa y sales de la zanja.\n"
+    f"Ahora el laberinto parece estable y de hecho \n"
+    f"te parece familiar con lo que alcanzaste a ver \n"
+    f"del mapa.\n"
 )
 
 texto_investigas_mas = (
-    f"Tus ojos se fijan en algo que parece producir un destello de luz rojo, y procedes a tomarlo con tus manos.\n"
-    f"Entonces, el calor empieza a desaparecer y la habitación comienza a iluminarse.\n"
-    f"Notas que tu visión estaba borrosa pero también notas, a medida que el mareo desaparece,\n" 
+    f"Tus ojos se fijan en algo que parece producir \n"
+    f"un destello de luz rojo, y procedes a tomarlo \n"
+    f"con tus manos. Entonces, el calor empieza a \n"
+    f"desaparecer y la habitación comienza a iluminarse.\n"
+    f"Notas que tu visión estaba borrosa pero también \n"
+    f"notas, a medida que el mareo desaparece,\n" 
     f"que te encuentras en una cámara llena de artefactos\n"
 )
 
 texto_proceder_seguridad = (
-    f"Usando el misterioso mapa, navegas el laberinto con una confianza renovada.\n"
-    f"El mapa te lleva a una cámara central llena de artefactos.\n"
+    f"Usando el misterioso mapa, navegas el laberinto \n"
+    f"con una confianza renovada. El mapa te lleva a \n"
+    f"una cámara central llena de artefactos.\n"
 )
 
 texto_camara_central = (
-    f"A medida que investigas los artefactos más a fondo, notas un pequeño compartimento que revela una llave.\n"
-    f"Intrigado, notas una cerradura muy peculiar que encaja perfectamente con la forma de la llave.\n"
-    f"Insertas la llave en la cerradura y la cámara comienza a transformarse.\n"
-    f"Se abre un pasadizo que te conduce de vuelta al mundo real.\n"
-    f"A medida que lo recorres notas que estás sosteniendo un objeto muy antiguo: una reliquia del experimento.\n\n"
+    f"A medida que investigas los artefactos más a \n"
+    f"fondo, notas un pequeño compartimento que \n"
+    f"revela una llave. Intrigado, notas una cerradura \n"
+    f"muy peculiar que encaja perfectamente con la \n"
+    f"forma de la llave. Insertas la llave en la \n"
+    f"cerradura y la cámara comienza a transformarse.\n"
+    f"Se abre un pasadizo que te conduce de vuelta al \n"
+    f"mundo real. A medida que lo recorres notas que \n"
+    f"estás sosteniendo un objeto muy antiguo: una \n"
+    f"reliquia del experimento.\n\n"
     f"HAS ESCAPADO DEL LABERINTO Y ESTÁS A SALVO\n\n"
-    f"Este artefacto es único, un símbolo de tu triunfo sobre el enigmático laberinto.\n"
-    f"Puede que tenga una significancia histórica o que tenga misteriosos poderes que podrás aprovechar en tu vida.\n"
-    f"La naturaleza y potencial de esta reliquia están por ser descubiertas…\n"
+    f"Este artefacto es único, un símbolo de tu \n"
+    f"triunfo sobre el enigmático laberinto.\n"
+    f"Puede que tenga una significancia histórica \n"
+    f"o que tenga misteriosos poderes que podrás \n"
+    f"aprovechar en tu vida. La naturaleza y potencial \n"
+    f"de esta reliquia están por ser descubiertas…\n"
 )
 
 texto_enfrentar_guardianes = (
-    f"Te paras firmemente de cara a los guardianes con determinación.\n"
-    f"Sin embargo, su cantidad te abruma, y sus garras despedazan cualquier defensa que puedas tener.\n"
-    f"Lo último que ves es la retorcida mueca de en la cara de uno de los guardianes mientras la oscuridad te consume.\n\n"
-    f"El experimento reclama una nueva víctima y tu aventura en el laberinto llega a un trágico final.\n\n"
+    f"Te paras firmemente de cara a los guardianes \n"
+    f"con determinación. Sin embargo, su cantidad te \n"
+    f"abruma, y sus garras despedazan cualquier defensa \n"
+    f"que puedas tener. Lo último que ves es la retorcida \n"
+    f"mueca de en la cara de uno de los guardianes \n"
+    f"mientras la oscuridad te consume.\n\n"
+    f"El experimento reclama una nueva víctima y tu \n"
+    f"aventura en el laberinto llega a un trágico final.\n\n"
     f"FIN\n"
 )
 
 texto_escapar_adentrandose = (
-    f"Con el miedo apretando tu corazón, te giras y corres hacia la profundidad del laberinto, con la esperanza de perder a los guardianes que te persiguen.\n"
-    f"Sin embargo, el laberinto serpentea de manera impredecible y te encuentras en un callejón sin salida.\n"
-    f"Los guardianes se acercan con sus ojos hambrientos fijos en ti.\n"
+    f"Con el miedo apretando tu corazón, te giras y corres \n"
+    f"hacia la profundidad del laberinto, con la esperanza \n"
+    f"de perder a los guardianes que te persiguen.\n"
+    f"Sin embargo, el laberinto serpentea de manera \n"
+    f"impredecible y te encuentras en un callejón sin salida.\n"
+    f"Los guardianes se acercan con sus ojos hambrientos \n"
+    f"fijos en ti.\n"
 )
 
 texto_lograste_escalar_no_caes = (
     f"Con todas tus fuerzas escalas y tocas suelo firme.\n"
-    f"Te encuentras en una caverna, ¿acaso la misma que decidiste ignorar?\n"
-    f"No muy lejos ves que la luz del exterior se asoma pero eres consciente de que si ésta es la misma caverna que decidiste ignorar.\n"
+    f"Te encuentras en una caverna, ¿acaso la misma que \n"
+    f"decidiste ignorar? No muy lejos ves que la luz del \n"
+    f"exterior se asoma pero eres consciente de que si \n"
+    f"ésta es la misma caverna que decidiste ignorar.\n"
     f"Salir podría traerte de vuelta a este mismo punto.\n"
 )
 
 texto_implorar_piedad = (
-    f"Te arrodillas e imploras piedad.\n"
-    f"Los guardianes hacen una pausa, sus caras retorcidas muestran una expresión de duda por un momento.\n"
-    f"Pero la piedad no es un lenguaje que ellos entiendan.\n"
-    f"Atacan sin remordimiento y tus lamentos quedan sin respuesta.\n\n"
-    f"El experimento reclama una nueva víctima y tu aventura en el laberinto llega a un trágico final.\n\n"
+    f"Te arrodillas e imploras piedad.Los guardianes hacen \n"
+    f"una pausa, sus caras retorcidas muestran una expresión \n"
+    f"de duda por un momento. Pero la piedad no es un \n"
+    f"lenguaje que ellos entiendan. Atacan sin remordimiento\n"
+    f"y tus lamentos quedan sin respuesta.\n\n"
+    f"El experimento reclama una nueva víctima y tu aventura \n"
+    f"en el laberinto llega a un trágico final.\n\n"
     f"FIN\n"
 )
 
 texto_investigar_caverna = (
-    f"La caverna está muy calurosa, no sabes si es buena idea quedarte.\n"
-    f"Sin embargo, también piensas que algo muy importante puedes encontrar si investigas un poco más.\n"
+    f"La caverna está muy calurosa, no sabes si es buena \n"
+    f"idea quedarte. Sin embargo, también piensas que algo \n"
+    f"muy importante puedes encontrar si investigas un poco más.\n"
 )
 
 texto_buscar_otra_salida50 = (
-    f"Te adentras en un camino particularmente escabroso, y cada vez más oscuro.\n"
-    f"El piso se siente cada vez más inestable.\n"
-    f"En el momento en que te preguntas si deberías retornar, el suelo se derrumba.\n"
-    f"Agitas tus brazos y tus manos agarran algo.\n"
+    f"Te adentras en un camino particularmente escabroso, \n"
+    f"y cada vez más oscuro. El piso se siente cada vez \n"
+    f"más inestable. En el momento en que te preguntas si \n"
+    f"deberías retornar, el suelo se derrumba. Agitas tus \n"
+    f"brazos y tus manos agarran algo.\n"
 )
 
 texto_permaneces_caverna = (
-    f"El calor aumenta y comienzas a sentir algo de mareo, aún no encuentras nada.\n"
-    f"Una parte de ti cree que debe investigar un poco más.\n"
-    f"Miras a la salida, está más lejana de lo que parece.\n"
-    f"No sabes si puedas llegar sin desmayarte.\n"
+    f"El calor aumenta y comienzas a sentir algo de mareo, \n"
+    f"aún no encuentras nada. Una parte de ti cree que debe \n"
+    f"investigar un poco más. Miras a la salida, está más \n"
+    f"lejana de lo que parece. No sabes si puedas llegar \n"
+    f"sin desmayarte.\n"
 )
 
 texto_precipitas_salida = (
-    f"El calor es insoportable, tu visión de la salida se hace doble, caes al suelo, pierdes la consciencia.\n"
-    f"Te entregas a una muerte sin dolor.\n"
-    f"El experimento ha cobrado una nueva vida.\n\n"
+    f"El calor es insoportable, tu visión de la salida se \n"
+    f"hace doble, caes al suelo, pierdes la consciencia.\n"
+    f"Te entregas a una muerte sin dolor. El experimento \n"
+    f"ha cobrado una nueva vida.\n\n"
     f"FIN\n"
 )
 
