@@ -1,15 +1,38 @@
 from tkinter import *
+from tkinter import font
 import random as rn
 
 #Características generales del jugador
 nombre_jugador = ""
-stamina_jugador = 30
+stamina_jugador = 50
 meta = 0
 
 # Inicialización de la ventana usando tkinter
 principal = Tk()
 principal.title("Perdido en el Laberinto: Un Juego Simple Basado en Texto")
-principal.geometry("750x350")
+principal.geometry("750x500")
+
+#Variables de diseño
+
+#principal.overrideredirect(True)
+
+fuente_general = font.Font(family="Garamond", size = 16)
+principal.option_add("*Font", fuente_general)
+color_fondo = '#311414'
+color_boton = "#603838"
+color_letra = "#ffffff"
+color_letra_boton= "#ffffff"
+color_barra_titulo= "#6b7368"
+
+#title_bar = Frame(principal, bg=color_barra_titulo, relief="raised", bd=0)
+#title_bar.pack(expand=1, fill="x")
+#title_bar.bind("<B1-Motion>", move_window)
+
+principal.configure(bg=color_fondo)
+principal.option_add("*Label.Background",color_fondo)
+principal.option_add("*Label.Foreground", color_letra)
+principal.option_add("*Button.Background", color_boton)
+principal.option_add("*Button.Foreground", color_letra_boton)
 
 #Introducción y configuración del jugador
 etiqueta_intro = Label(principal, text = "Bienvenido a Perdido en el Laberinto, ¿estás dispuesto a comenzar?\n")
@@ -54,7 +77,8 @@ def buscarEnLaHabitación(): #Página 4
     etiqueta_texto_buscar_en_la_habitacion.pack()
     
     boton_inspeccionar_simbolos.pack()
-    boton_afrontar_la_puerta.place(x=200,y=100)
+    boton_afrontar_la_puerta.place(x=290, y=218)
+
 
 def afrontarLaPuerta(): #Página 6
     boton_inspeccionar_simbolos.destroy()
@@ -177,6 +201,7 @@ def continuarAdelante(): #Página 28
     boton_encontrar_refugio.destroy()
     boton_continuar_adelante_1.destroy()
     boton_continuar_1.destroy()
+    boton_a_la_30.destroy()
     etiqueta_texto_rendir_ante_caida.destroy()
     etiqueta_texto_retroceder_replantear_estrategia.destroy()
     etiqueta_texto_atravesar_puerta_que_se_cierra.destroy()
@@ -287,7 +312,7 @@ def escaparAdentrandose(): #Página 44
 
 def lograsteEscalarNoCaes(): #Página 46
     boton_lograste_escalar_no_caes.destroy()
-    boton_rendir_ante_caida.destroy()
+    #boton_rendir_ante_caida.destroy()
     etiqueta_texto_buscar_otra_salida50.destroy()
     
     etiqueta_texto_lograste_escalar_no_caes.pack()
@@ -365,24 +390,26 @@ def minijuego50():
     boton_dale.pack()
     
     global stamina_jugador, meta
-    stamina_jugador -= rn.randint(0,10)
-    meta += rn.randint(0,10)
+    stamina_jugador -= rn.randint(1,10)
+    meta += rn.randint(1,10)
 
     print("Stamina ", stamina_jugador)
     print("Meta ", meta)
 
-    if meta >= 100:
-        etiqueta_resultado.config(text="Ganó")
+    if meta >= 50:
+        etiqueta_resultado.config(text="Lograste escalar")
         boton_resultado_1.pack()
+        boton_dale.destroy()
     elif stamina_jugador <= 0:
-        etiqueta_resultado.config(text="Perdió")
+        etiqueta_resultado.config(text="Tu energía se ha agotado, te caerás")
         boton_resultado_2.pack()
+        boton_dale.destroy()
         
     etiqueta_resultado.pack()    
 
 def llamarBoton():
     minijuego50()
-    if meta < 30 and stamina_jugador > 0:
+    if meta < 50 and stamina_jugador > 0:
         principal.after(100000000000000, llamarBoton)                       
 
 
