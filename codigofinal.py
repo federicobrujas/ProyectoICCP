@@ -394,7 +394,7 @@ def salirJuego():
 boton_inicio = Button(principal, text = "Comenzar", command = comienzoHistoria)
 boton_inicio.pack()
 boton_salir = Button(principal, text = "Salir", command = salirJuego)
-boton_buscar_en_la_habitacion = Button(principal, text = "Buscar en la habitación", command = buscarEnLaHabitación)
+boton_buscar_en_la_habitacion = Button(principal, text = "Explorar la habitación", command = buscarEnLaHabitación)
 boton_afrontar_la_puerta = Button(principal, text = "Afrontar la puerta", command = afrontarLaPuerta)
 boton_cruzar_el_puente = Button(principal, text = "Cruzar el puente", command = cruzarElPuente)
 boton_explorar_otro_camino = Button(principal, text = "Explorar otro camino", command = explorarOtroCamino)
@@ -424,8 +424,7 @@ boton_dar_ultima_batalla = Button(principal, text = "Dar una última batalla", c
 boton_implorar_piedad = Button(principal, text = "Implorar piedad", command = implorarPiedad)
 boton_salir_caverna = Button(principal, text = "Salir de la caverna y continuar explorando", command = buscarOtraSalida50)
 boton_quedarse_investigar = Button(principal, text = "Quedarse e investigar un poco más", command = permanecesCaverna)
-boton_lograste_escalar_no_caes = Button(principal, text="Intentas escalar", command = goldenChoice)
-boton_rendir_ante_caida = Button(principal, text= "Te rindes y caes esperando lo mejor", command = rendirAnteCaida)
+boton_lograste_escalar_no_caes = Button(principal, text="¿Crees que tienes suficiente energía para escalar?", command = minijuego50)
 boton_investigas_mas= Button(principal, text= "Investigar un poco más", command = investigasMas)
 boton_precipitas_salida = Button(principal, text= "Precipitarte hacia la salida", command = precipitasSalida)
 boton_continuar_1 = Button(principal, text = "Seguir adelante", command = continuarAdelante)
@@ -438,7 +437,6 @@ boton_a_la_30 =Button(principal, text = "Retroceder y replantear estrategia", co
 boton_dale = Button(principal, text = "Dale!", command = llamarBoton)
 boton_resultado_1 = Button(principal, text = "Continuar", command = goldenChoice)
 boton_resultado_2 = Button(principal, text ="Continuar", command = rendirAnteCaida)
-
 
 # Textos
 texto_inicial = (
