@@ -1,4 +1,6 @@
 from tkinter import *
+import random as rn
+
 #Características generales del jugador
 nombre_jugador = ""
 stamina_jugador = 30
