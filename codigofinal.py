@@ -1,6 +1,8 @@
 from tkinter import *
 #Características generales del jugador
 nombre_jugador = ""
+stamina_jugador = 30
+meta = 0
 
 # Inicialización de la ventana usando tkinter
 principal = Tk()
@@ -155,9 +157,11 @@ def encontrarOtraSalida(): #Página 25
     boton_continuar.pack()
     
 def rendirAnteCaida(): #Página 26
-    boton_rendir_ante_caida.destroy()
     boton_lograste_escalar_no_caes.destroy()
+    boton_dale.destroy()
+    boton_resultado_2.destroy()
     etiqueta_texto_buscar_otra_salida50.destroy()
+    etiqueta_resultado.destroy()
     
     etiqueta_texto_rendir_ante_caida.pack()
     
@@ -319,7 +323,6 @@ def buscarOtraSalida50(): #Página 50
     etiqueta_texto_buscar_otra_salida50.pack()
     
     boton_lograste_escalar_no_caes.pack()
-    boton_rendir_ante_caida.pack()
     
 def permanecesCaverna(): #Página 56
     boton_salir_caverna.destroy()
@@ -340,16 +343,46 @@ def precipitasSalida(): #Página 57
     
 def goldenChoice(): #Página 69
     boton_lograste_escalar_no_caes.destroy()
-    boton_rendir_ante_caida.destroy()
     boton_continuar_4.destroy()
     boton_forzar_cerradura.destroy()
     boton_explorar_otro_camino_2.destroy()
+    boton_dale.destroy()
+    boton_resultado_1.destroy()
+    etiqueta_resultado.destroy()
     etiqueta_texto_buscar_otra_salida50.destroy()
     etiqueta_texto_buscas_refugio_esperas.destroy()
     etiqueta_texto_continuar_adelante.destroy()
     
-    etiqueta_texto_golden_choice.pack()  
-              
+    etiqueta_texto_golden_choice.pack() 
+    
+#Funciones de interacción
+def minijuego50():
+    etiqueta_texto_buscar_otra_salida50.destroy()
+    boton_lograste_escalar_no_caes.destroy()
+    
+    boton_dale.pack()
+    
+    global stamina_jugador, meta
+    stamina_jugador -= rn.randint(0,10)
+    meta += rn.randint(0,10)
+
+    print("Stamina ", stamina_jugador)
+    print("Meta ", meta)
+
+    if meta >= 100:
+        etiqueta_resultado.config(text="Ganó")
+        boton_resultado_1.pack()
+    elif stamina_jugador <= 0:
+        etiqueta_resultado.config(text="Perdió")
+        boton_resultado_2.pack()
+        
+    etiqueta_resultado.pack()    
+
+def llamarBoton():
+    minijuego50()
+    if meta < 30 and stamina_jugador > 0:
+        principal.after(100000000000000, llamarBoton)                       
+
 
 #Función terminar ejecución
 def salirJuego():
@@ -400,6 +433,9 @@ boton_continuar_3 = Button(principal, text = "Continuar", command = camaraCentra
 boton_continuar_4 = Button(principal, text = "Continuar", command = goldenChoice)
 boton_continuar_5 = Button(principal, text= "Continuar", command = investigarCaverna)
 boton_a_la_30 =Button(principal, text = "Retroceder y replantear estrategia", command = retrocederReplantearEstrategia)
+boton_dale = Button(principal, text = "Dale!", command = llamarBoton)
+boton_resultado_1 = Button(principal, text = "Continuar", command = goldenChoice)
+boton_resultado_2 = Button(principal, text ="Continuar", command = rendirAnteCaida)
 
 
 # Textos
@@ -727,6 +763,7 @@ etiqueta_texto_permaneces_caverna = Label(principal,  text = texto_permaneces_ca
 etiqueta_texto_vuelta_al_laberinto = Label(principal, text = texto_vuelta_al_laberinto)
 etiqueta_texto_precipitas_salida = Label(principal, text = texto_precipitas_salida)
 etiqueta_texto_golden_choice = Label(principal, text = texto_golden_choice)
+etiqueta_resultado = Label(principal, text = "")
 
 
 #Loop principal
