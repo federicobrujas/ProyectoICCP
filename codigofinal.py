@@ -457,7 +457,7 @@ texto_buscar_en_la_habitacion = (
         f"nota arrugada en tu bolsillo.\n" 
         f"Dice: ""Navega el laberinto \n" 
         f"para encontrar la verdad"".\n" 
-        f"Determinado, contemplas\n 
+        f"Determinado, contemplas\n"
         f"tu próximo movimiento.\n"
     )
 
