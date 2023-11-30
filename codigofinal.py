@@ -41,8 +41,8 @@ principal.option_add("*Button.Foreground", color_letra_boton)
 #Documentos generales 
 
 pygame.mixer.init()
-pygame.mixer.music.load("C:\\Users\\jleon\\OneDrive\\Documentos\\Through the Sinister Gate.mp3")
-pygame.mixer.music.play(loops=-1)
+#pygame.mixer.music.load("C:\\Users\\jleon\\OneDrive\\Documentos\\Through the Sinister Gate.mp3")
+#pygame.mixer.music.play(loops=-1)
 
 
 #Introducción y configuración del jugador
@@ -61,7 +61,7 @@ ingreso_nombre.pack()
 def comenzarJuego():
     global nombre_jugador
     nombre_jugador = ingreso_nombre.get()
-    etiqueta_intro.config(text = f"Bienvenido, {nombre_jugador}! La aventura comienza...")
+    etiqueta_intro.configure(text = f"Bienvenido, {nombre_jugador}! La aventura comienza...")
     boton_inicio.destroy()
     boton_salir.pack()
 
@@ -408,11 +408,11 @@ def minijuego50():
     print("Meta ", meta)
 
     if meta >= 50:
-        etiqueta_resultado.config(text="Lograste escalar")
+        etiqueta_resultado.configure(text="Lograste escalar")
         boton_resultado_1.pack()
         boton_dale.destroy()
     elif stamina_jugador <= 0:
-        etiqueta_resultado.config(text="Tu energía se ha agotado, te caerás")
+        etiqueta_resultado.configure(text="Tu energía se ha agotado, te caerás")
         boton_resultado_2.pack()
         boton_dale.destroy()
         
