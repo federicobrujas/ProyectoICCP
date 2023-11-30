@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import font
 import random as rn
+from customtkinter import *
+import pygame
 
 #Características generales del jugador
 nombre_jugador = ""
@@ -8,38 +10,47 @@ stamina_jugador = 50
 meta = 0
 
 # Inicialización de la ventana usando tkinter
-principal = Tk()
+principal = CTk()
 principal.title("Perdido en el Laberinto: Un Juego Simple Basado en Texto")
 principal.geometry("750x500")
 
 #Variables de diseño
 
+set_appearance_mode("system")
+set_default_color_theme("blue")
+
+
 #principal.overrideredirect(True)
 
 fuente_general = font.Font(family="Garamond", size = 16)
 principal.option_add("*Font", fuente_general)
-color_fondo = '#311414'
-color_boton = "#603838"
+
 color_letra = "#ffffff"
 color_letra_boton= "#ffffff"
 color_barra_titulo= "#6b7368"
+color_fondo = "#000000"
 
 #title_bar = Frame(principal, bg=color_barra_titulo, relief="raised", bd=0)
 #title_bar.pack(expand=1, fill="x")
 #title_bar.bind("<B1-Motion>", move_window)
 
-principal.configure(bg=color_fondo)
 principal.option_add("*Label.Background",color_fondo)
 principal.option_add("*Label.Foreground", color_letra)
-principal.option_add("*Button.Background", color_boton)
 principal.option_add("*Button.Foreground", color_letra_boton)
 
+#Documentos generales 
+
+pygame.mixer.init()
+pygame.mixer.music.load("C:\\Users\\jleon\\OneDrive\\Documentos\\Through the Sinister Gate.mp3")
+pygame.mixer.music.play(loops=-1)
+
+
 #Introducción y configuración del jugador
-etiqueta_intro = Label(principal, text = "Bienvenido a Perdido en el Laberinto, ¿estás dispuesto a comenzar?\n")
+etiqueta_intro = CTkLabel(principal, text = "Bienvenido a Perdido en el Laberinto, ¿estás dispuesto a comenzar?\n")
 etiqueta_intro.pack()
 
 
-etiqueta_nombre = Label(principal, text = "Ingresa tu nombre")
+etiqueta_nombre = CTkLabel(principal, text = "Ingresa tu nombre")
 etiqueta_nombre.pack()
 
 ingreso_nombre = Entry(principal)
@@ -418,52 +429,52 @@ def salirJuego():
     principal.destroy()
 
 #Definición de botones para interacción
-boton_inicio = Button(principal, text = "Comenzar", command = comienzoHistoria)
+boton_inicio = CTkButton(master = principal, text = "Comenzar", command = comienzoHistoria)
 boton_inicio.pack()
-boton_salir = Button(principal, text = "Salir", command = salirJuego)
-boton_buscar_en_la_habitacion = Button(principal, text = "Explorar la habitación", command = buscarEnLaHabitación)
-boton_afrontar_la_puerta = Button(principal, text = "Afrontar la puerta", command = afrontarLaPuerta)
-boton_cruzar_el_puente = Button(principal, text = "Cruzar el puente", command = cruzarElPuente)
-boton_explorar_otro_camino = Button(principal, text = "Explorar otro camino", command = explorarOtroCamino)
-boton_explorar_otro_camino_1 = Button(principal, text = "Explorar otro camino", command = explorarOtroCamino)
-boton_inspeccionar_simbolos = Button(principal, text = "Inspeccionar los Símbolos en las Paredes", command = inspeccionarSimbolos)
-boton_arrancar_simbolos = Button(principal, text = "Arrancar los símbolos y conservarlos", command = arrancarSimbolos)
-boton_memorizar_mapa = Button(principal, text = "Memorizar el mapa y avanzar por la puerta", command = memorizarMapaCruzarPuerta)
-boton_atravesar_puerta_que_se_cierra = Button(principal, text = "Atravesar rápidamente la puerta que se cierra", command = atravesarPuertaQueSeCierra)
-boton_encontrar_otra_salida = Button(principal, text ="Buscar otra salida", command = encontrarOtraSalida)
-boton_seguir_cruzando_el_puente = Button(principal, text ="Continuar cruzando el puente", command = seguirCruzandoElPuente)
-boton_explorar_camino_izquierda = Button(principal, text = "Explorar el camino de la izquierda", command = explorarCaminoIzquierda)
-boton_explorar_camino_derecha = Button(principal, text = "Explorar el camino de la derecha", command = explorarOtroCamino)
-boton_continuar_adelante = Button(principal, text = "Continuar adelante", command = continuarAdelante)
-boton_retroceder_replantear_estrategia = Button(principal, text = "Retroceder y replantear tu estrategia", command = retrocederReplantearEstrategia)
-boton_investigar_caverna = Button(principal, text = "Investigar la caverna", command = investigarCaverna)
-boton_ignorar_caverna = Button(principal, text = "Ignorar la caverna y continuar por el camino", command = buscarOtraSalida50)
-boton_continuar = Button(principal, text = "Continuar", command = buscarOtraSalida50)
-boton_forzar_cerradura = Button(principal, text = "Intentar forzar cerradura", command = forzarCerradura)
-boton_explorar_otro_camino_2 = Button(principal, text = "Explorar otro camino", command = goldenChoice)
-boton_enfrentar_laberinto = Button(principal, text = "Enfrentar el laberinto directamente")
-boton_encontrar_refugio = Button(principal, text = "Buscar refugio y esperar un cambio", command = buscasRefugioEsperas)
-boton_seguir_el_mapa = Button(principal, text = "Seguir el mapa para navegar con seguridad", command = procederSeguridad)
-boton_explorar_otro_camino_3 = Button(principal, text = "Continúa tu camino siguiendo únicamente tus instintos", command = explorarOtroCamino)
-boton_enfrentar_guardianes = Button(principal, text = "Enfrentar a los guardianes", command = enfrentarGuardianes)
-boton_escapar_adentrandose = Button(principal, text = "Escapar adentrándose en el laberinto", command = escaparAdentrandose)
-boton_dar_ultima_batalla = Button(principal, text = "Dar una última batalla", command = enfrentarGuardianes)
-boton_implorar_piedad = Button(principal, text = "Implorar piedad", command = implorarPiedad)
-boton_salir_caverna = Button(principal, text = "Salir de la caverna y continuar explorando", command = buscarOtraSalida50)
-boton_quedarse_investigar = Button(principal, text = "Quedarse e investigar un poco más", command = permanecesCaverna)
-boton_lograste_escalar_no_caes = Button(principal, text="¿Crees que tienes suficiente energía para escalar?", command = minijuego50)
-boton_investigas_mas= Button(principal, text= "Investigar un poco más", command = investigasMas)
-boton_precipitas_salida = Button(principal, text= "Precipitarte hacia la salida", command = precipitasSalida)
-boton_continuar_1 = Button(principal, text = "Seguir adelante", command = continuarAdelante)
-boton_continuar_adelante_1 = Button(principal, text = "Continuar adelante", command = continuarAdelante)
-boton_continuar_2 = Button(principal, text = "Continuar", command = camaraCentral)
-boton_continuar_3 = Button(principal, text = "Continuar", command = camaraCentral)
-boton_continuar_4 = Button(principal, text = "Continuar", command = goldenChoice)
-boton_continuar_5 = Button(principal, text= "Continuar", command = investigarCaverna)
-boton_a_la_30 =Button(principal, text = "Retroceder y replantear estrategia", command = retrocederReplantearEstrategia)
-boton_dale = Button(principal, text = "Dale!", command = llamarBoton)
-boton_resultado_1 = Button(principal, text = "Continuar", command = goldenChoice)
-boton_resultado_2 = Button(principal, text ="Continuar", command = rendirAnteCaida)
+boton_salir = CTkButton(master = principal, text = "Salir", command = salirJuego)
+boton_buscar_en_la_habitacion = CTkButton(master = principal, text = "Explorar la habitación", command = buscarEnLaHabitación)
+boton_afrontar_la_puerta = CTkButton(master=principal, text = "Afrontar la puerta", command = afrontarLaPuerta)
+boton_cruzar_el_puente = CTkButton(master=principal, text = "Cruzar el puente", command = cruzarElPuente)
+boton_explorar_otro_camino = CTkButton(master=principal, text = "Explorar otro camino", command = explorarOtroCamino)
+boton_explorar_otro_camino_1 = CTkButton(master=principal, text = "Explorar otro camino", command = explorarOtroCamino)
+boton_inspeccionar_simbolos = CTkButton(master=principal, text = "Inspeccionar los Símbolos en las Paredes", command = inspeccionarSimbolos)
+boton_arrancar_simbolos = CTkButton(master=principal, text = "Arrancar los símbolos y conservarlos", command = arrancarSimbolos)
+boton_memorizar_mapa = CTkButton(master=principal, text = "Memorizar el mapa y avanzar por la puerta", command = memorizarMapaCruzarPuerta)
+boton_atravesar_puerta_que_se_cierra = CTkButton(master=principal, text = "Atravesar rápidamente la puerta que se cierra", command = atravesarPuertaQueSeCierra)
+boton_encontrar_otra_salida = CTkButton(master=principal, text ="Buscar otra salida", command = encontrarOtraSalida)
+boton_seguir_cruzando_el_puente = CTkButton(master=principal, text ="Continuar cruzando el puente", command = seguirCruzandoElPuente)
+boton_explorar_camino_izquierda = CTkButton(master=principal, text = "Explorar el camino de la izquierda", command = explorarCaminoIzquierda)
+boton_explorar_camino_derecha = CTkButton(master=principal, text = "Explorar el camino de la derecha", command = explorarOtroCamino)
+boton_continuar_adelante = CTkButton(master=principal, text = "Continuar adelante", command = continuarAdelante)
+boton_retroceder_replantear_estrategia = CTkButton(master=principal, text = "Retroceder y replantear tu estrategia", command = retrocederReplantearEstrategia)
+boton_investigar_caverna = CTkButton(master=principal, text = "Investigar la caverna", command = investigarCaverna)
+boton_ignorar_caverna = CTkButton(master=principal, text = "Ignorar la caverna y continuar por el camino", command = buscarOtraSalida50)
+boton_continuar = CTkButton(master=principal, text = "Continuar", command = buscarOtraSalida50)
+boton_forzar_cerradura = CTkButton(master=principal, text = "Intentar forzar cerradura", command = forzarCerradura)
+boton_explorar_otro_camino_2 = CTkButton(master=principal, text = "Explorar otro camino", command = goldenChoice)
+boton_enfrentar_laberinto = CTkButton(master=principal, text = "Enfrentar el laberinto directamente")
+boton_encontrar_refugio = CTkButton(master=principal, text = "Buscar refugio y esperar un cambio", command = buscasRefugioEsperas)
+boton_seguir_el_mapa = CTkButton(master=principal, text = "Seguir el mapa para navegar con seguridad", command = procederSeguridad)
+boton_explorar_otro_camino_3 = CTkButton(master=principal, text = "Continúa tu camino siguiendo únicamente tus instintos", command = explorarOtroCamino)
+boton_enfrentar_guardianes = CTkButton(master=principal, text = "Enfrentar a los guardianes", command = enfrentarGuardianes)
+boton_escapar_adentrandose = CTkButton(master=principal, text = "Escapar adentrándose en el laberinto", command = escaparAdentrandose)
+boton_dar_ultima_batalla = CTkButton(master=principal, text = "Dar una última batalla", command = enfrentarGuardianes)
+boton_implorar_piedad = CTkButton(master=principal, text = "Implorar piedad", command = implorarPiedad)
+boton_salir_caverna = CTkButton(master=principal, text = "Salir de la caverna y continuar explorando", command = buscarOtraSalida50)
+boton_quedarse_investigar = CTkButton(master=principal, text = "Quedarse e investigar un poco más", command = permanecesCaverna)
+boton_lograste_escalar_no_caes = CTkButton(master=principal, text="¿Crees que tienes suficiente energía para escalar?", command = minijuego50)
+boton_investigas_mas= CTkButton(master=principal, text= "Investigar un poco más", command = investigasMas)
+boton_precipitas_salida = CTkButton(master=principal, text= "Precipitarte hacia la salida", command = precipitasSalida)
+boton_continuar_1 = CTkButton(master=principal, text = "Seguir adelante", command = continuarAdelante)
+boton_continuar_adelante_1 = CTkButton(master=principal, text = "Continuar adelante", command = continuarAdelante)
+boton_continuar_2 = CTkButton(master=principal, text = "Continuar", command = camaraCentral)
+boton_continuar_3 = CTkButton(master=principal, text = "Continuar", command = camaraCentral)
+boton_continuar_4 = CTkButton(master=principal, text = "Continuar", command = goldenChoice)
+boton_continuar_5 = CTkButton(master=principal, text= "Continuar", command = investigarCaverna)
+boton_a_la_30 = CTkButton(master=principal, text = "Retroceder y replantear estrategia", command = retrocederReplantearEstrategia)
+boton_dale = CTkButton(master=principal, text = "Dale!", command = llamarBoton)
+boton_resultado_1 = CTkButton(master=principal, text = "Continuar", command = goldenChoice)
+boton_resultado_2 = CTkButton(master=principal, text ="Continuar", command = rendirAnteCaida)
 
 # Textos
 texto_inicial = (
@@ -760,37 +771,37 @@ texto_golden_choice = (
 )
 
 #Etiquetas de texto
-etiqueta_texto_inicial = Label(principal, text = texto_inicial)
-etiqueta_texto_buscar_en_la_habitacion = Label(principal, text = texto_buscar_en_la_habitacion)
-etiqueta_texto_afrontar_la_puerta = Label(principal, text = texto_afrontar_la_puerta)
-etiqueta_texto_inspeccionar_simbolos = Label(principal, text = texto_inspeccionar_simbolos)
-etiqueta_texto_arrancar_simbolos = Label(principal, text = texto_arrancar_simbolos)
-etiqueta_texto_memorizar_mapa_cruzar_puerta = Label(principal, text =texto_memorizar_mapa_cruzar_puerta)
-etiqueta_texto_encontrar_otra_salida = Label(principal, text = texto_encontrar_otra_salida)
-etiqueta_texto_atravesar_puerta_que_se_cierra = Label(principal, text = texto_atravesar_puerta_que_se_cierra)
-etiqueta_texto_cruzar_el_puente = Label(principal, text =texto_cruzar_el_puente)
-etiqueta_texto_continuar_cruzando_el_puente = Label(principal, text = texto_continuar_cruzando_el_puente)
-etiqueta_texto_explorar_otro_camino = Label(principal, text = texto_explorar_otro_camino)
-etiqueta_texto_rendir_ante_caida = Label(principal, text = texto_rendir_ante_caida)
-etiqueta_texto_continuar_adelante = Label(principal, text = texto_continuar_adelante)
-etiqueta_texto_retroceder_replantear_estrategia = Label(principal, text = texto_retroceder_replantear_estrategia)
-etiqueta_texto_explorar_camino_izquierda = Label(principal, text = texto_explorar_camino_izquierda)
-etiqueta_texto_intentas_forzar_cerradura = Label(principal, text = texto_intentas_forzar_cerradura)
-etiqueta_texto_buscas_refugio_esperas = Label(principal, text = texto_buscas_refugio_esperas)
-etiqueta_texto_investigas_mas = Label (principal, text = texto_investigas_mas)
-etiqueta_texto_proceder_seguridad = Label(principal, text = texto_proceder_seguridad)
-etiqueta_texto_camara_central = Label(principal, text = texto_camara_central)
-etiqueta_texto_enfrentar_guardianes = Label(principal, text = texto_enfrentar_guardianes)
-etiqueta_texto_escapar_adentrandose = Label(principal, text = texto_escapar_adentrandose)
-etiqueta_texto_lograste_escalar_no_caes = Label(principal, text = texto_lograste_escalar_no_caes)
-etiqueta_texto_implorar_piedad = Label(principal, text = texto_implorar_piedad)
-etiqueta_texto_investigar_caverna = Label(principal, text = texto_investigar_caverna)
-etiqueta_texto_buscar_otra_salida50 = Label(principal, text = texto_buscar_otra_salida50)
-etiqueta_texto_permaneces_caverna = Label(principal,  text = texto_permaneces_caverna)
-etiqueta_texto_vuelta_al_laberinto = Label(principal, text = texto_vuelta_al_laberinto)
-etiqueta_texto_precipitas_salida = Label(principal, text = texto_precipitas_salida)
-etiqueta_texto_golden_choice = Label(principal, text = texto_golden_choice)
-etiqueta_resultado = Label(principal, text = "")
+etiqueta_texto_inicial = CTkLabel(principal, text = texto_inicial)
+etiqueta_texto_buscar_en_la_habitacion = CTkLabel(principal, text = texto_buscar_en_la_habitacion)
+etiqueta_texto_afrontar_la_puerta = CTkLabel(principal, text = texto_afrontar_la_puerta)
+etiqueta_texto_inspeccionar_simbolos = CTkLabel(principal, text = texto_inspeccionar_simbolos)
+etiqueta_texto_arrancar_simbolos = CTkLabel(principal, text = texto_arrancar_simbolos)
+etiqueta_texto_memorizar_mapa_cruzar_puerta = CTkLabel(principal, text =texto_memorizar_mapa_cruzar_puerta)
+etiqueta_texto_encontrar_otra_salida = CTkLabel(principal, text = texto_encontrar_otra_salida)
+etiqueta_texto_atravesar_puerta_que_se_cierra = CTkLabel(principal, text = texto_atravesar_puerta_que_se_cierra)
+etiqueta_texto_cruzar_el_puente = CTkLabel(principal, text =texto_cruzar_el_puente)
+etiqueta_texto_continuar_cruzando_el_puente = CTkLabel(principal, text = texto_continuar_cruzando_el_puente)
+etiqueta_texto_explorar_otro_camino = CTkLabel(principal, text = texto_explorar_otro_camino)
+etiqueta_texto_rendir_ante_caida = CTkLabel(principal, text = texto_rendir_ante_caida)
+etiqueta_texto_continuar_adelante = CTkLabel(principal, text = texto_continuar_adelante)
+etiqueta_texto_retroceder_replantear_estrategia = CTkLabel(principal, text = texto_retroceder_replantear_estrategia)
+etiqueta_texto_explorar_camino_izquierda = CTkLabel(principal, text = texto_explorar_camino_izquierda)
+etiqueta_texto_intentas_forzar_cerradura = CTkLabel(principal, text = texto_intentas_forzar_cerradura)
+etiqueta_texto_buscas_refugio_esperas = CTkLabel(principal, text = texto_buscas_refugio_esperas)
+etiqueta_texto_investigas_mas = CTkLabel (principal, text = texto_investigas_mas)
+etiqueta_texto_proceder_seguridad = CTkLabel(principal, text = texto_proceder_seguridad)
+etiqueta_texto_camara_central = CTkLabel(principal, text = texto_camara_central)
+etiqueta_texto_enfrentar_guardianes = CTkLabel(principal, text = texto_enfrentar_guardianes)
+etiqueta_texto_escapar_adentrandose = CTkLabel(principal, text = texto_escapar_adentrandose)
+etiqueta_texto_lograste_escalar_no_caes = CTkLabel(principal, text = texto_lograste_escalar_no_caes)
+etiqueta_texto_implorar_piedad = CTkLabel(principal, text = texto_implorar_piedad)
+etiqueta_texto_investigar_caverna = CTkLabel(principal, text = texto_investigar_caverna)
+etiqueta_texto_buscar_otra_salida50 = CTkLabel(principal, text = texto_buscar_otra_salida50)
+etiqueta_texto_permaneces_caverna = CTkLabel(principal,  text = texto_permaneces_caverna)
+etiqueta_texto_vuelta_al_laberinto = CTkLabel(principal, text = texto_vuelta_al_laberinto)
+etiqueta_texto_precipitas_salida = CTkLabel(principal, text = texto_precipitas_salida)
+etiqueta_texto_golden_choice = CTkLabel(principal, text = texto_golden_choice)
+etiqueta_resultado = CTkLabel(principal, text = "")
 
 
 #Loop principal
